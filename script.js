@@ -1,56 +1,40 @@
-document.addEventListener("DOMContentLoaded", () => {
-    
-    // ==========================================
-    // 1. SISTEMA DE BUSCA EM TEMPO REAL
-    // ==========================================
-    const searchInput = document.getElementById("main-search");
-    const cards = document.querySelectorAll(".item-card");
+// Informações de cada tópico
+const TOPIC_INFO = {
+  solo: "A saúde do solo é a base de tudo: matéria orgânica, microbiota e cobertura vegetal garantem fertilidade por décadas.",
+  agua: "Gestão eficiente da água envolve irrigação de precisão, reuso e proteção de nascentes dentro da propriedade.",
+  solar: "A energia solar reduz custos operacionais e emissões — ideal para irrigação, armazéns e ordenha.",
+  carbono: "O agro pode capturar carbono no solo e nas florestas, gerando créditos negociáveis no mercado.",
+  biodiversidade: "Corredores ecológicos e áreas de reserva mantêm polinizadores e controle natural de pragas."
+};
 
-    if (searchInput) {
-        searchInput.addEventListener("input", (e) => {
-            const value = e.target.value.toLowerCase().trim();
+// Scroll suave para qualquer botão com data-scroll
+document.querySelectorAll('[data-scroll]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.scroll;
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  });
+});
 
-            cards.forEach(card => {
-                const title = card.getAttribute("data-title");
-                
-                if (title.includes(value)) {
-                    card.classList.remove("hidden");
-                } else {
-                    card.classList.add("hidden");
-                }
-            });
-        });
-    }
+// Tópicos em alta — clique mostra descrição
+const topicItems = document.querySelectorAll('#topic-list li');
+const topicInfo = document.getElementById('topic-info');
 
-    // ==========================================
-    // 2. COMPORTAMENTO DE FECHAR TAGS (Estilo Miku)
-    // ==========================================
-    const closeButtons = document.querySelectorAll(".close-pill");
+topicItems.forEach(li => {
+  li.addEventListener('click', () => {
+    topicItems.forEach(i => i.classList.remove('active'));
+    li.classList.add('active');
+    const key = li.dataset.topic;
+    topicInfo.textContent = TOPIC_INFO[key] || "Sem informações disponíveis.";
+  });
+});
 
-    closeButtons.forEach(button => {
-        button.addEventListener("click", (e) => {
-            e.stopPropagation(); 
-            const pill = button.parentElement;
-            
-            pill.style.opacity = "0";
-            pill.style.transform = "scale(0.8)";
-            
-            setTimeout(() => {
-                pill.remove();
-            }, 300);
-        });
-    });
-
-    // ==========================================
-    // 3. EFEITOS DE FEEDBACK NOS BOTÕES PREMIUM
-    // ==========================================
-    const connectBtn = document.getElementById("btn-connect");
-    
-    if (connectBtn) {
-        connectBtn.addEventListener("click", () => {
-            connectBtn.innerText = "Conectado";
-            connectBtn.style.background = "linear-gradient(135deg, #00b0ff 0%, #00e676 100%)";
-            console.log("AGRO.CORE v3: Conexão segura estabelecida com a rede.");
-        });
-    }
+// Busca de tópicos
+const searchInput = document.getElementById('topic-search');
+searchInput.addEventListener('input', e => {
+  const q = e.target.value.toLowerCase();
+  topicItems.forEach(li => {
+    const match = li.textContent.toLowerCase().includes(q);
+    li.style.display = match ? '' : 'none';
+  });
 });
