@@ -3,141 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroEquilíbrio - Agro Forte, Futuro Sustentável</title>
+    <title>AgroEquilíbrio • Futuro Sustentável</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://via.placeholder.com/32x32/228B22/FFFFFF?text=🌱" type="image/x-icon">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <span class="logo-icon">🌾</span>
-                <h1>AgroEquilíbrio</h1>
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+    
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="text-4xl">🌱</span>
+                <h1 class="text-2xl font-bold tracking-tight">AgroEquilíbrio</h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#simulador">Simulador</a></li>
-                <li><a href="#dicas">Dicas</a></li>
-                <li><a href="#quiz">Quiz</a></li>
+            <ul class="hidden md:flex gap-8 text-lg">
+                <li><a href="#home" class="hover:text-emerald-600 transition">Início</a></li>
+                <li><a href="#sobre" class="hover:text-emerald-600 transition">Sobre</a></li>
+                <li><a href="#simulador" class="hover:text-emerald-600 transition">Simulador</a></li>
+                <li><a href="#galeria" class="hover:text-emerald-600 transition">Galeria</a></li>
+                <li><a href="#quiz" class="hover:text-emerald-600 transition">Quiz</a></li>
             </ul>
-            <button id="theme-toggle" class="btn-theme">🌙</button>
-            <button class="menu-toggle">☰</button>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Agro Forte, Futuro Sustentável</h2>
-            <p>Equilíbrio entre produção e meio ambiente</p>
-            <a href="#simulador" class="btn-primary">Explorar o Simulador</a>
+            <button id="theme-toggle" class="text-2xl p-2 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-800 transition">
+                🌙
+            </button>
         </div>
-        <div class="hero-image">
-            <div class="overlay"></div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="min-h-screen bg-cover bg-center flex items-center relative"
+             style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://source.unsplash.com/1920x1080/?sustainable-farming')">
+        <div class="max-w-7xl mx-auto px-6 text-center text-white pt-20">
+            <h2 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+                Agro Forte,<br>Futuro Sustentável
+            </h2>
+            <p class="text-2xl md:text-3xl mb-10 max-w-3xl mx-auto">
+                Equilíbrio entre produção e meio ambiente
+            </p>
+            <a href="#simulador" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-xl font-semibold px-10 py-5 rounded-2xl transition transform hover:scale-105">
+                Experimentar Simulador
+            </a>
         </div>
     </section>
 
-    <section id="sobre" class="section">
-        <div class="container">
-            <h2>Sobre o Projeto</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>🌍 O Desafio</h3>
-                    <p>Como produzir mais alimentos sem destruir o planeta? O AgroEquilíbrio mostra que é possível ter produção eficiente e preservação ambiental.</p>
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 text-emerald-700 dark:text-emerald-500">Sobre o Projeto</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="bg-emerald-50 dark:bg-emerald-950 p-8 rounded-3xl">
+                        <i class="fa-solid fa-seedling text-5xl text-emerald-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">O Desafio</h3>
+                        <p class="text-lg">Produzir alimentos de forma eficiente sem comprometer o futuro do planeta.</p>
+                    </div>
+                    <div class="bg-emerald-50 dark:bg-emerald-950 p-8 rounded-3xl">
+                        <i class="fa-solid fa-leaf text-5xl text-emerald-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Nossa Solução</h3>
+                        <p class="text-lg">Tecnologia + Conhecimento = Agricultura Regenerativa</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>🌱 Nossa Missão</h3>
-                    <p>Apresentar práticas sustentáveis, tecnologias agrícolas modernas e o impacto positivo de decisões conscientes para o futuro do agronegócio paranaense e brasileiro.</p>
-                </div>
+                <img src="https://source.unsplash.com/800x600/?farm-drone" class="rounded-3xl shadow-2xl" alt="Agricultura moderna">
             </div>
         </div>
     </section>
 
-    <section id="simulador" class="section bg-light">
-        <div class="container">
-            <h2>Simulador de Equilíbrio Agroambiental</h2>
-            <p class="subtitle">Ajuste os parâmetros e veja o impacto na produção e no meio ambiente!</p>
+    <!-- Simulador -->
+    <section id="simulador" class="py-20 bg-emerald-950 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-4">Simulador de Equilíbrio</h2>
+            <p class="text-center text-xl mb-12 text-emerald-300">Ajuste e veja o impacto em tempo real</p>
             
-            <div class="simulator">
-                <div class="controls">
-                    <div class="slider-group">
-                        <label for="producao">Intensidade de Produção (%)</label>
-                        <input type="range" id="producao" min="10" max="100" value="50">
-                        <span id="producao-val">50</span>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Controls -->
+                <div class="space-y-10">
+                    <div>
+                        <label class="block text-lg mb-3">Intensidade de Produção</label>
+                        <input type="range" id="producao" min="10" max="100" value="60" class="w-full accent-emerald-500">
+                        <div class="flex justify-between text-sm mt-1">
+                            <span>Baixa</span><span id="producao-val" class="font-bold">60%</span><span>Alta</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-lg mb-3">Práticas Sustentáveis</label>
+                        <input type="range" id="sustentabilidade" min="10" max="100" value="70" class="w-full accent-emerald-500">
+                        <div class="flex justify-between text-sm mt-1">
+                            <span>Baixa</span><span id="sustentabilidade-val" class="font-bold">70%</span><span>Alta</span>
+                        </div>
                     </div>
                     
-                    <div class="slider-group">
-                        <label for="sustentabilidade">Práticas Sustentáveis (%)</label>
-                        <input type="range" id="sustentabilidade" min="10" max="100" value="50">
-                        <span id="sustentabilidade-val">50</span>
-                    </div>
-                    
-                    <div class="result">
-                        <p>Produção: <strong id="result-prod">Média</strong></p>
-                        <p>Impacto Ambiental: <strong id="result-amb">Equilibrado</strong></p>
-                        <div id="balance-bar" class="balance-bar">
-                            <div id="balance-fill" class="balance-fill"></div>
+                    <div class="bg-emerald-900/50 p-8 rounded-3xl">
+                        <p class="text-2xl mb-4">Resultado:</p>
+                        <p>Produção: <strong id="result-prod" class="text-emerald-400">Boa</strong></p>
+                        <p>Meio Ambiente: <strong id="result-amb" class="text-emerald-400">Saudável</strong></p>
+                        <div class="h-6 bg-gray-700 rounded-full mt-6 overflow-hidden">
+                            <div id="balance-fill" class="h-full bg-gradient-to-r from-red-500 to-emerald-500 w-3/4 transition-all"></div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="visual">
-                    <div id="farm-visual" class="farm">
-                        <div class="field" id="field1"></div>
-                        <div class="field" id="field2"></div>
-                        <div class="tree" id="trees"></div>
+
+                <!-- Visual Farm -->
+                <div class="relative">
+                    <img id="farm-img" src="https://source.unsplash.com/800x600/?sustainable-farm" 
+                         class="rounded-3xl shadow-2xl transition-all duration-700" alt="Fazenda">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-3xl flex items-end p-8">
+                        <div class="text-white">
+                            <p id="status" class="text-3xl font-bold">Equilíbrio Perfeito 🌱</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="dicas" class="section">
-        <div class="container">
-            <h2>Dicas para uma Agricultura Sustentável</h2>
-            <div class="grid-3">
-                <div class="tip-card">
-                    <div class="tip-icon">🚜</div>
-                    <h3>Rotação de Culturas</h3>
-                    <p>Evita o esgotamento do solo e reduz a necessidade de fertilizantes químicos.</p>
-                </div>
-                <div class="tip-card">
-                    <div class="tip-icon">💧</div>
-                    <h3>Irrigação Inteligente</h3>
-                    <p>Sensores de umidade e gotejamento economizam até 60% de água.</p>
-                </div>
-                <div class="tip-card">
-                    <div class="tip-icon">🐝</div>
-                    <h3>Preservação da Biodiversidade</h3>
-                    <p>Manter áreas de mata nativa ajuda no controle natural de pragas.</p>
-                </div>
+    <!-- Galeria -->
+    <section id="galeria" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16">Práticas Sustentáveis</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <img src="https://source.unsplash.com/600x400/?agroforestry" class="rounded-3xl shadow-xl hover:scale-105 transition" alt="Agrofloresta">
+                <img src="https://source.unsplash.com/600x400/?precision-agriculture" class="rounded-3xl shadow-xl hover:scale-105 transition" alt="Agricultura de Precisão">
+                <img src="https://source.unsplash.com/600x400/?regenerative-farming" class="rounded-3xl shadow-xl hover:scale-105 transition" alt="Agricultura Regenerativa">
             </div>
         </div>
     </section>
 
-    <section id="quiz" class="section bg-light">
-        <div class="container">
-            <h2>Quiz: Você é um Agricultor Sustentável?</h2>
-            <div id="quiz-container">
-                <div id="question-text" class="question"></div>
-                <div id="options" class="options"></div>
-                <button id="next-btn" class="btn-primary" style="display: none;">Próxima Pergunta</button>
-            </div>
-            <div id="result-quiz" class="quiz-result" style="display: none;">
-                <h3 id="quiz-score"></h3>
-                <p id="quiz-message"></p>
-                <button id="restart-btn" class="btn-primary">Refazer Quiz</button>
+    <!-- Quiz -->
+    <section id="quiz" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-12">Quiz Sustentável</h2>
+            <div id="quiz-container" class="bg-gray-100 dark:bg-gray-800 p-10 rounded-3xl">
+                <!-- JS preenche aqui -->
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 AgroEquilíbrio - Concurso Agrinho Programação</p>
-            <p>Desenvolvido por [Seu Nome] - [Sua Série]</p>
-            <div class="credits">
-                <p>Imagens geradas por IA (Midjourney) e editadas no Canva. Código 100% autoral.</p>
-            </div>
+    <footer class="bg-emerald-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-2xl mb-4">🌱 AgroEquilíbrio - Agrinho 2026</p>
+            <p>Desenvolvido por [SEU NOME] • [SÉRIE/TURMA]</p>
+            <p class="mt-6 text-sm opacity-75">Código 100% autoral • Imagens de Unsplash</p>
         </div>
     </footer>
 
