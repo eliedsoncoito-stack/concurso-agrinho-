@@ -1,50 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agro Forte | Futuro Sustentável</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroEquilíbrio - Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://via.placeholder.com/32x32/228B22/FFFFFF?text=🌱" type="image/x-icon">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">🌾</span>
+                <h1>AgroEquilíbrio</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+            <button id="theme-toggle" class="btn-theme">🌙</button>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">
-      <h1>Agro <span>Forte</span></h1>
-    </div>
-    <ul>
-      <li><a href="#home">Início</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#praticas">Práticas</a></li>
-      <li><a href="#impacto">Impacto</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Agro Forte, Futuro Sustentável</h2>
+            <p>Equilíbrio entre produção e meio ambiente</p>
+            <a href="#simulador" class="btn-primary">Explorar o Simulador</a>
+        </div>
+        <div class="hero-image">
+            <div class="overlay"></div>
+        </div>
+    </section>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-overlay">
-      <h1>AGRO FORTE</h1>
-      <h2>Futuro Sustentável</h2>
-      <p>Equilíbrio entre produção forte e preservação do meio ambiente</p>
-      <a href="#sobre" class="btn">Saiba Mais</a>
-    </div>
-  </section>
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre o Projeto</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🌍 O Desafio</h3>
+                    <p>Como produzir mais alimentos sem destruir o planeta? O AgroEquilíbrio mostra que é possível ter produção eficiente e preservação ambiental.</p>
+                </div>
+                <div class="card">
+                    <h3>🌱 Nossa Missão</h3>
+                    <p>Apresentar práticas sustentáveis, tecnologias agrícolas modernas e o impacto positivo de decisões conscientes para o futuro do agronegócio paranaense e brasileiro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Sobre -->
-  <section id="sobre" class="section">
-    <h2>Sobre Nós</h2>
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800" alt="Fazenda Agro Forte">
-      <div class="text">
-        <p>Somos uma empresa comprometida com o futuro do agronegócio brasileiro. Combinamos alta tecnologia com práticas sustentáveis para produzir mais, preservando o solo, a água e a biodiversidade.</p>
-        <p>Nosso lema: <strong>Produzir hoje sem comprometer o amanhã.</strong></p>
-      </div>
-    </div>
-  </section>
+    <section id="simulador" class="section bg-light">
+        <div class="container">
+            <h2>Simulador de Equilíbrio Agroambiental</h2>
+            <p class="subtitle">Ajuste os parâmetros e veja o impacto na produção e no meio ambiente!</p>
+            
+            <div class="simulator">
+                <div class="controls">
+                    <div class="slider-group">
+                        <label for="producao">Intensidade de Produção (%)</label>
+                        <input type="range" id="producao" min="10" max="100" value="50">
+                        <span id="producao-val">50</span>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label for="sustentabilidade">Práticas Sustentáveis (%)</label>
+                        <input type="range" id="sustentabilidade" min="10" max="100" value="50">
+                        <span id="sustentabilidade-val">50</span>
+                    </div>
+                    
+                    <div class="result">
+                        <p>Produção: <strong id="result-prod">Média</strong></p>
+                        <p>Impacto Ambiental: <strong id="result-amb">Equilibrado</strong></p>
+                        <div id="balance-bar" class="balance-bar">
+                            <div id="balance-fill" class="balance-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="visual">
+                    <div id="farm-visual" class="farm">
+                        <div class="field" id="field1"></div>
+                        <div class="field" id="field2"></div>
+                        <div class="tree" id="trees"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Práticas -->
-  <section id="praticas" class="section bg-green">
-    <h2>Noss
+    <section id="dicas" class="section">
+        <div class="container">
+            <h2>Dicas para uma Agricultura Sustentável</h2>
+            <div class="grid-3">
+                <div class="tip-card">
+                    <div class="tip-icon">🚜</div>
+                    <h3>Rotação de Culturas</h3>
+                    <p>Evita o esgotamento do solo e reduz a necessidade de fertilizantes químicos.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💧</div>
+                    <h3>Irrigação Inteligente</h3>
+                    <p>Sensores de umidade e gotejamento economizam até 60% de água.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🐝</div>
+                    <h3>Preservação da Biodiversidade</h3>
+                    <p>Manter áreas de mata nativa ajuda no controle natural de pragas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="section bg-light">
+        <div class="container">
+            <h2>Quiz: Você é um Agricultor Sustentável?</h2>
+            <div id="quiz-container">
+                <div id="question-text" class="question"></div>
+                <div id="options" class="options"></div>
+                <button id="next-btn" class="btn-primary" style="display: none;">Próxima Pergunta</button>
+            </div>
+            <div id="result-quiz" class="quiz-result" style="display: none;">
+                <h3 id="quiz-score"></h3>
+                <p id="quiz-message"></p>
+                <button id="restart-btn" class="btn-primary">Refazer Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AgroEquilíbrio - Concurso Agrinho Programação</p>
+            <p>Desenvolvido por [Seu Nome] - [Sua Série]</p>
+            <div class="credits">
+                <p>Imagens geradas por IA (Midjourney) e editadas no Canva. Código 100% autoral.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
