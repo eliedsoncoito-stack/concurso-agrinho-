@@ -1,128 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGRO.CORE // SYSTEM v3</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroForte — Futuro Sustentável</title>
+  <meta name="description" content="Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-wrapper">
-            <div class="logo">AGRO.CORE //</div>
-            <ul class="nav-links">
-                <li class="nav-item active"><a href="#">Core</a></li>
-                <li class="nav-item"><a href="#">Database</a></li>
-                <li class="nav-item"><a href="#">Network</a></li>
-            </ul>
-            <button class="btn-cyber">Acessar Terminal</button>
-        </div>
-    </nav>
-
-    <div class="container">
-        
-        <section class="hero">
-            <div class="hero-banner">
-                <h1 class="hero-title">Sustentabilidade<br>& Automação</h1>
-                <p class="hero-desc">Explorando o desenvolvimento focado na preservação ecológica através de robótica integrada e inteligência de dados aplicada à biosfera.</p>
-                <button class="btn-cyber" style="padding: 12px 30px;">Iniciar Varredura</button>
-                
-                <div class="floating-hud">
-                    <div class="hud-line">
-                        <span style="color: var(--text-dim);">Foco Principal:</span>
-                        <span style="color: var(--cyber-blue);">Agrotech Core</span>
-                    </div>
-                    <div class="hud-line">
-                        <span style="color: var(--text-dim);">Protocolo:</span>
-                        <span>Bio-Sync 2.6</span>
-                    </div>
-                    <div class="hud-line" style="margin-bottom: 0;">
-                        <span style="color: var(--text-dim);">Status:</span>
-                        <span style="color: var(--neon-green);">Online</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <main class="main-layout">
-            
-            <div>
-                <h2 class="module-title">Arquivos de Inovação</h2>
-                
-                <div class="cyber-grid">
-                    <div class="cyber-card">
-                        <div class="card-img-box">
-                            <span class="card-badge">Autônomo</span>
-                            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad451?q=80&w=400">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Hidroponia IA</h3>
-                            <span style="font-size: 11px; color: var(--neon-green);">EFICIÊNCIA // 98%</span>
-                        </div>
-                    </div>
-
-                    <div class="cyber-card">
-                        <div class="card-img-box">
-                            <span class="card-badge">Aéreo</span>
-                            <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=400">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Mapeamento Drone</h3>
-                            <span style="font-size: 11px; color: var(--cyber-blue);">PRECISÃO // ULTRA</span>
-                        </div>
-                    </div>
-
-                    <div class="cyber-card">
-                        <div class="card-img-box">
-                            <span class="card-badge">Fóton</span>
-                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=400">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Malha Solar</h3>
-                            <span style="font-size: 11px; color: var(--text-dim);">ECO CLEAN // RUN</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <aside class="sidebar-panel">
-                <div class="widget-section">
-                    <h3 class="widget-label">// Filtros Rápidos</h3>
-                    <div class="tech-pills">
-                        <div class="pill">Automação</div>
-                        <div class="pill">Energia Limpa</div>
-                        <div class="pill">IA Preditiva</div>
-                        <div class="pill">Sustentável</div>
-                    </div>
-                </div>
-
-                <div class="widget-section" style="margin-bottom: 0;">
-                    <h3 class="widget-label">// Logs em Execução</h3>
-                    <div class="leaderboard">
-                        <div class="leader-item">
-                            <div class="leader-num">01</div>
-                            <div class="leader-text">
-                                <h4>Redes Hidropônicas</h4>
-                                <span>84k requisições</span>
-                            </div>
-                        </div>
-                        <div class="leader-item">
-                            <div class="leader-num">02</div>
-                            <div class="leader-text">
-                                <h4>Drones de Monitoramento</h4>
-                                <span>62k requisições</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-        </main>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">🌿</span>
+        <span class="logo-text">AgroForte</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#pilares">Pilares</a>
+        <a href="#producao">Produção</a>
+        <a href="#energia">Energia</a>
+        <a href="#missao">Missão</a>
+      </nav>
     </div>
+  </header>
 
-    <script src="js/script.js"></script>
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">Agro · Sustentabilidade · Futuro</span>
+      <h1 class="hero-title">
+        Agro forte,<br />
+        <em>futuro sustentável.</em>
+      </h1>
+      <p class="hero-sub">
+        Equilíbrio entre produção e meio ambiente — uma nova forma de cultivar
+        a terra, respeitando o solo, a água e as pessoas.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" data-scroll="pilares">
+          Leia mais →
+        </button>
+        <button class="btn btn-ghost" data-scroll="missao">
+          Nossa missão
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILARES + TÓPICOS -->
+  <section id="pilares" class="section">
+    <div class="container two-col">
+      <!-- Pilares -->
+      <div>
+        <span class="eyebrow dark">Pilares</span>
+        <h2 class="section-title">Três bases para um agro mais forte.</h2>
+        <p class="section-text">
+          O agro do futuro nasce da união entre tecnologia, respeito ambiental
+          e responsabilidade social. Veja os pilares que sustentam essa visão.
+        </p>
+
+        <div class="pillars">
+          <article class="pillar-card">
+            <div class="pillar-icon">🌱</div>
+            <h3>Produção consciente</h3>
+            <p>Plantios que respeitam ciclos naturais e regeneram o solo.</p>
+            <button class="link-btn" data-scroll="producao">Ver mais →</button>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon">🌳</div>
+            <h3>Preservação ativa</h3>
+            <p>Florestas, nascentes e biodiversidade protegidas dentro da fazenda.</p>
+            <button class="link-btn" data-scroll="producao">Ver mais →</button>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon">☀️</div>
+            <h3>Energia limpa</h3>
+            <p>Solar, biogás e eficiência energética no campo.</p>
+            <button class="link-btn" data-scroll="energia">Ver mais →</button>
+          </article>
+        </div>
+      </div>
+
+      <!-- Tópicos em alta -->
+      <aside class="topics">
+        <span class="eyebrow dark">Tópicos em alta</span>
+        <h2 class="section-title small">O que está movendo o campo.</h2>
+
+        <div class="search">
+          <span>🔎</span>
+          <input id="topic-search" type="text" placeholder="Buscar tópico..." />
+        </div>
+
+        <ul class="topic-list" id="topic-list">
+          <li data-topic="solo">Saúde do solo</li>
+          <li data-topic="agua">Gestão da água</li>
+          <li data-topic="solar">Energia solar no campo</li>
+          <li data-topic="carbono">Crédito de carbono</li>
+          <li data-topic="biodiversidade">Biodiversidade</li>
+        </ul>
+
+        <div id="topic-info" class="topic-info">
+          Selecione um tópico para saber mais.
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PRODUÇÃO / PRESERVAÇÃO / ENERGIA -->
+  <section id="producao" class="section section-alt">
+    <div class="container">
+      <span class="eyebrow dark">Equilíbrio</span>
+      <h2 class="section-title">Produzir e preservar caminham juntos.</h2>
+
+      <div class="features">
+        <article class="feature">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Plantação" />
+          <h3>A Produção</h3>
+          <p>Tecnologia de precisão, manejo integrado e respeito ao solo
+            elevam a produtividade sem agredir o ambiente.</p>
+        </article>
+
+        <article class="feature">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80" alt="Floresta" />
+          <h3>A Preservação</h3>
+          <p>Áreas de reserva, recuperação de nascentes e corredores
+            ecológicos garantem o futuro da biodiversidade.</p>
+        </article>
+
+        <article class="feature">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Energia Solar" />
+          <h3>A Energia</h3>
+          <p>Painéis solares, biogás e eficiência energética reduzem
+            custos e emissões no campo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLAR -->
+  <section id="energia" class="section solar-section">
+    <div class="container two-col">
+      <div>
+        <span class="eyebrow">Energia</span>
+        <h2 class="section-title light">O sol é o novo combustível do agro.</h2>
+        <p class="section-text light">
+          A energia solar já alimenta irrigação, ordenha, armazéns e estufas.
+          Uma fazenda movida pelo sol é uma fazenda mais lucrativa e
+          ambientalmente responsável.
+        </p>
+      </div>
+      <div class="solar-img">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1000&q=80" alt="Painéis solares no campo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSÃO / CTA -->
+  <section id="missao" class="section cta-section">
+    <div class="container cta-inner">
+      <img src="https://images.unsplash.com/photo-1592982537447-7440770faae9?w=1000&q=80" alt="Trator no campo" />
+      <div>
+        <span class="eyebrow dark">Missão</span>
+        <h2 class="section-title">Cultivar hoje, sem comprometer o amanhã.</h2>
+        <p class="section-text">
+          Nossa missão é mostrar que produção e preservação não são opostos —
+          são parceiros. Um agro forte é, antes de tudo, um agro sustentável.
+        </p>
+        <button class="btn btn-primary" data-scroll="top">
+          Conheça nossa missão →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026. Site feito por aluno Eliedson</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
