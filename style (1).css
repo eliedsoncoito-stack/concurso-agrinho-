@@ -1,173 +1,116 @@
 /* ==========================================
-   1. DESIGN SYSTEM & VARIÁVEIS
+   1. DESIGN SYSTEM - CYBERPUNK / ANIME HIGH-TECH
    ========================================== */
 :root {
-    --bg-main: #060907;
-    --bg-surface: #0d1410;
-    --accent-glow: rgba(0, 230, 118, 0.4);
-    --accent-solid: #00e676; 
-    --accent-gradient: linear-gradient(135deg, #00e676 0%, #00b0ff 100%); 
-    --text-primary: #ffffff;
-    --text-secondary: #94a3b8;
-    --text-muted: #00b0ff; 
-    --glass-bg: rgba(13, 20, 16, 0.55);
-    --glass-border: rgba(255, 255, 255, 0.06);
-    --radius-lg: 24px;
-    --radius-md: 16px;
-    --radius-sm: 8px;
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --bg-dark: #050806;
+    --bg-panel: #0b110e;
+    --neon-green: #00ff66;
+    --neon-glow: rgba(0, 255, 102, 0.3);
+    --cyber-blue: #00d9ff;
+    --text-main: #ffffff;
+    --text-dim: #70887d;
+    --border-color: rgba(0, 255, 102, 0.15);
+    --font-tech: 'Space Grotesk', sans-serif;
 }
 
 /* ==========================================
-   2. CONFIGURAÇÕES GERAIS e RESET
+   2. REINICIALIZAÇÃO E FUNDO COM GRADE (MATRIX GRID)
    ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    background-color: var(--bg-main);
-    color: var(--text-primary);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
     overflow-x: hidden;
+    /* Fundo com padrão de linhas estilo HUD militar/anime */
     background-image: 
-        radial-gradient(circle at 5% 15%, rgba(0, 230, 118, 0.07) 0%, transparent 35%),
-        radial-gradient(circle at 95% 85%, rgba(0, 176, 255, 0.06) 0%, transparent 40%);
+        linear-gradient(rgba(0, 255, 102, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 102, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
     background-attachment: fixed;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: var(--bg-main);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--bg-surface);
-    border-radius: var(--radius-sm);
-    border: 2px solid var(--bg-main);
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-solid);
-}
-
 .container {
-    max-width: 1440px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
 /* ==========================================
-   3. NAVBAR (Efeito Vidro Fosco)
+   3. NAVBAR ASSIMÉTRICA
    ========================================== */
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(6, 9, 7, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
-    padding: 22px 0;
+    background: rgba(5, 8, 6, 0.85);
+    border-bottom: 2px solid var(--neon-green);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 255, 102, 0.1);
 }
 
 .nav-wrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 26px;
+    font-family: var(--font-tech);
+    font-size: 28px;
     font-weight: 700;
-    letter-spacing: -1px;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-main);
+    text-shadow: 0 0 10px var(--neon-glow);
+    border-left: 4px solid var(--neon-green);
+    padding-left: 10px;
 }
 
 .nav-links {
     display: flex;
-    gap: 36px;
+    gap: 40px;
     list-style: none;
 }
 
 .nav-item a {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text-secondary);
-    transition: var(--transition-smooth);
-    position: relative;
-    padding: 8px 0;
-}
-
-.nav-item a:hover, .nav-item.active a {
-    color: var(--text-primary);
-}
-
-.nav-item a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent-solid);
-    transition: var(--transition-smooth);
-}
-
-.nav-item:hover a::after, .nav-item.active a::after {
-    width: 100%;
-}
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.search-bar {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 12px 18px;
-    border-radius: var(--radius-md);
-    color: var(--text-primary);
+    color: var(--text-dim);
+    text-decoration: none;
+    font-weight: 600;
     font-size: 14px;
-    outline: none;
-    width: 260px;
-    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-.search-bar:focus {
-    border-color: var(--accent-solid);
-    box-shadow: 0 0 20px var(--accent-glow);
-    width: 300px;
+.nav-item.active a, .nav-item a:hover {
+    color: var(--neon-green);
+    text-shadow: 0 0 8px var(--neon-glow);
 }
 
-.btn-main {
-    background: var(--accent-gradient);
-    color: #000; 
+/* BOTAO ESTILO CIRCUITO */
+.btn-cyber {
+    background: transparent;
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 10px 24px;
+    font-family: var(--font-tech);
     font-weight: 700;
-    padding: 12px 26px;
-    border-radius: var(--radius-md);
-    font-size: 14px;
-    border: none;
+    text-transform: uppercase;
     cursor: pointer;
-    box-shadow: 0 4px 20px rgba(0, 230, 118, 0.25);
-    transition: var(--transition-smooth);
+    clip-path: polygon(0 0, 85% 0, 100% 45%, 100% 100%, 15% 100%, 0 55%);
+    transition: all 0.3s ease;
 }
 
-.btn-main:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.45);
+.btn-cyber:hover {
+    background: var(--neon-green);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-green);
 }
 
 /* ==========================================
-   4. HERO BANNER
+   4. HERO BANNER COM CORTES DIAGONAIS (HUD)
    ========================================== */
 .hero {
     margin: 40px 0;
@@ -175,325 +118,251 @@ body {
 
 .hero-banner {
     position: relative;
-    height: 500px;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(90deg, #060907 35%, rgba(6, 9, 7, 0.3) 70%), 
-                url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=1920') no-repeat center center;
-    background-size: cover;
-    border: 1px solid var(--glass-border);
-}
-
-.hero-content {
+    background: linear-gradient(135deg, rgba(11, 17, 14, 0.9) 0%, rgba(5, 8, 6, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=1920') center/cover;
+    border: 1px solid var(--border-color);
     padding: 60px;
-    max-width: 650px;
-    z-index: 2;
+    /* Corte diagonal superior esquerdo e inferior direito típico de Anime UI */
+    clip-path: polygon(40px 0%, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0% 40px);
 }
 
-.badge-tag {
-    background: rgba(0, 230, 118, 0.1);
-    border: 1px solid var(--accent-solid);
-    color: var(--accent-solid);
-    padding: 6px 14px;
-    border-radius: var(--radius-sm);
+.hero-banner::before {
+    content: '[ SYSTEM: ONLINE ]';
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    font-family: var(--font-tech);
     font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    display: inline-block;
-    margin-bottom: 24px;
+    color: var(--cyber-blue);
+    letter-spacing: 2px;
 }
 
 .hero-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1.1;
+    font-family: var(--font-tech);
+    font-size: 56px;
+    text-transform: uppercase;
+    line-height: 1;
     margin-bottom: 20px;
-    letter-spacing: -1.5px;
+    background: linear-gradient(90deg, #fff, var(--text-dim));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-desc {
-    color: var(--text-secondary);
+    color: var(--text-dim);
     font-size: 16px;
+    max-width: 550px;
     line-height: 1.6;
-    margin-bottom: 36px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 16px;
-}
-
-.btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    color: var(--text-primary);
-    padding: 14px 32px;
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    backdrop-filter: blur(8px);
-    transition: var(--transition-smooth);
-}
-
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.12);
-    transform: translateY(-2px);
-}
-
-.floating-panel {
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid var(--glass-border);
-    padding: 26px;
-    border-radius: var(--radius-lg);
-    width: 320px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    z-index: 2;
-}
-
-.panel-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-.panel-label { color: var(--text-secondary); }
-.panel-value { color: var(--text-muted); font-weight: 600; }
-
-/* ==========================================
-   5. DASHBOARD GRID & CARDS
-   ========================================== */
-.main-grid {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 40px;
-    margin-bottom: 80px;
-}
-
-.block-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 30px;
 }
 
-.block-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    position: relative;
-    padding-left: 16px;
-}
-
-.block-title::before {
-    content: '';
+/* PAINEL FLUTUANTE ESTILO REFC. LUFFY (DIAGONAL COM REFORÇO VIBRANTE) */
+.floating-hud {
     position: absolute;
-    left: 0;
-    top: 6px;
-    bottom: 6px;
-    width: 4px;
-    background: var(--accent-gradient);
-    border-radius: 2px;
+    right: 40px;
+    bottom: 40px;
+    background: rgba(11, 17, 14, 0.85);
+    border-left: 4px solid var(--cyber-blue);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+    width: 280px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%);
 }
 
-.explore-link {
-    font-size: 14px;
-    color: var(--accent-solid);
-    font-weight: 600;
-    transition: var(--transition-smooth);
-}
-
-.explore-link:hover { opacity: 0.8; letter-spacing: 0.5px; }
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 26px;
-    transition: var(--transition-smooth);
-}
-
-.item-card {
-    background: var(--glass-bg);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    border: 1px solid var(--glass-border);
-    transition: var(--transition-smooth);
-    position: relative;
-    cursor: pointer;
-}
-
-.item-card.hidden {
-    display: none;
-}
-
-.img-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 130%;
-    overflow: hidden;
-}
-
-.card-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition-smooth);
-}
-
-.card-tag {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    background: rgba(6, 9, 7, 0.85);
-    border: 1px solid var(--glass-border);
-    padding: 4px 10px;
-    border-radius: var(--radius-sm);
-    font-size: 11px;
-    font-weight: 700;
-    backdrop-filter: blur(4px);
-    z-index: 2;
-}
-
-.card-tag.tech { border-color: var(--text-muted); color: var(--text-muted); }
-.card-info { padding: 18px; }
-
-.card-title {
-    font-size: 16px;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 8px;
-    transition: var(--transition-smooth);
-}
-
-.card-meta {
+.hud-line {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-    color: var(--text-secondary);
+    font-family: var(--font-tech);
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
-
-.item-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent-solid);
-    box-shadow: 0 16px 35px rgba(0, 230, 118, 0.15);
-}
-.item-card:hover .card-img { transform: scale(1.06); }
-.item-card:hover .card-title { color: var(--accent-solid); }
 
 /* ==========================================
-   6. SIDEBAR WIDGETS
+   5. INTERFACE EM MÓDULOS (GRID ASSIMÉTRICO)
    ========================================== */
-.sidebar {
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.module-title {
+    font-family: var(--font-tech);
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
     display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
-.widget {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    padding: 26px;
-    backdrop-filter: blur(12px);
-}
-
-.widget-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 19px;
-    font-weight: 700;
-    margin-bottom: 22px;
-}
-
-.search-pills {
-    display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
 }
 
-.pill-item {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--glass-border);
-    padding: 8px 14px;
-    border-radius: var(--radius-md);
-    font-size: 13px;
-    color: var(--text-secondary);
+.module-title::before {
+    content: '';
+    width: 8px;
+    height: 18px;
+    background: var(--neon-green);
+    display: inline-block;
+}
+
+/* CARDS ESTILO PÔSTER DE JOGO/ANIME (REF. NARUTO) */
+.cyber-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.cyber-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    position: relative;
     cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-img-box {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Selo de Categoria Estilo Interface de Jogo */
+.card-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #000;
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--font-tech);
+}
+
+.card-content {
+    padding: 16px;
+    border-top: 1px solid rgba(0, 255, 102, 0.05);
+}
+
+.card-title {
+    font-family: var(--font-tech);
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+/* HOVER RADICAL NO CARD */
+.cyber-card:hover {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.15);
+    transform: translateY(-4px);
+}
+
+.cyber-card:hover .card-img-box img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.cyber-card:hover .card-title {
+    color: var(--neon-green);
+}
+
+/* ==========================================
+   6. SIDEBAR COMPONENT (ESTILO WIDGET MIKU UI)
+   ========================================== */
+.sidebar-panel {
+    background: rgba(11, 17, 14, 0.7);
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+}
+
+.widget-section {
+    margin-bottom: 35px;
+}
+
+.widget-label {
+    font-family: var(--font-tech);
+    font-size: 14px;
+    color: var(--cyber-blue);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Pílulas de busca brutas com hover cortado */
+.tech-pills {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
-    transition: var(--transition-smooth);
 }
 
-.close-pill {
-    font-style: normal;
-    color: rgba(255,255,255,0.4);
-    font-size: 11px;
-    transition: var(--transition-smooth);
+.pill {
+    background: rgba(0, 255, 102, 0.05);
+    border: 1px solid rgba(0, 255, 102, 0.2);
+    color: var(--text-dim);
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: var(--font-tech);
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
-.close-pill:hover { color: #ff4a4a; }
 
-.pill-item:hover {
-    background: var(--accent-gradient);
+.pill:hover {
+    background: var(--cyber-blue);
     color: #000;
-    font-weight: 600;
-    border-color: transparent;
-    transform: scale(1.04);
+    border-color: var(--cyber-blue);
+    font-weight: 700;
 }
 
-.ranking-container { display: flex; flex-direction: column; gap: 18px; }
+/* Lista de Rankings estilo Líder de Partida */
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-.rank-box {
+.leader-item {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 12px;
-    border-radius: var(--radius-md);
-    transition: var(--transition-smooth);
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 10px;
+    border-left: 2px solid var(--text-dim);
 }
-.rank-box:hover { background: rgba(255,255,255,0.02); }
 
-.num-id {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 26px;
-    font-weight: 800;
-    color: rgba(255,255,255,0.08);
-    width: 35px;
-    text-align: center;
+.leader-item:nth-child(1) { border-left-color: var(--neon-green); }
+
+.leader-num {
+    font-family: var(--font-tech);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dim);
 }
-.rank-box:nth-child(1) .num-id { color: var(--accent-solid); text-shadow: 0 0 10px rgba(0,230,118,0.3); }
-.rank-box:nth-child(2) .num-id { color: var(--text-muted); }
-.rank-box:nth-child(3) .num-id { color: #a3b899; }
 
-.rank-image { width: 52px; height: 52px; border-radius: var(--radius-sm); object-fit: cover; }
-.rank-info { flex: 1; min-width: 0; }
-.rank-heading { font-size: 14px; font-weight: 600; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.rank-sub { font-size: 12px; color: var(--text-secondary); }
+.leader-item:nth-child(1) .leader-num { color: var(--neon-green); }
 
-/* RESPONSIVIDADE */
-@media (max-width: 1200px) {
-    .main-grid { grid-template-columns: 1fr; }
-    .sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.leader-text h4 {
+    font-size: 13px;
+    text-transform: uppercase;
 }
-@media (max-width: 768px) {
-    .container { padding: 0 20px; }
-    .nav-links, .nav-actions .search-bar { display: none; }
-    .hero-banner { height: auto; padding: 50px 0; }
-    .hero-content { padding: 20px; }
-    .floating-panel { position: static; margin: 30px auto 0; width: 100%; }
-    .sidebar { grid-template-columns: 1fr; }
-    .hero-title { font-size: 36px; }
+
+.leader-text span {
+    font-size: 11px;
+    color: var(--text-dim);
 }
