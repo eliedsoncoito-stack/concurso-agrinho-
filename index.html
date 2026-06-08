@@ -1,151 +1,733 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroEquilíbrio • Futuro Sustentável</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <title>Agrinho 2026 | O Futuro Brota da Terra</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
-<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-    
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <span class="text-4xl">🌱</span>
-                <h1 class="text-2xl font-bold tracking-tight">AgroEquilíbrio</h1>
+
+<body>
+
+    <!-- LOADER -->
+
+    <div id="loader">
+
+        <div class="loader-container">
+
+            <div class="loader-ring"></div>
+
+            <h2>AGRINHO 2026</h2>
+
+            <p>Carregando o futuro...</p>
+
+        </div>
+
+    </div>
+
+    <!-- PARTÍCULAS -->
+
+    <div class="particles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- HEADER -->
+
+    <header id="header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-seedling"></i>
+
+                <span>AGRINHO 2026</span>
+
             </div>
-            <ul class="hidden md:flex gap-8 text-lg">
-                <li><a href="#home" class="hover:text-emerald-600 transition">Início</a></li>
-                <li><a href="#sobre" class="hover:text-emerald-600 transition">Sobre</a></li>
-                <li><a href="#simulador" class="hover:text-emerald-600 transition">Simulador</a></li>
-                <li><a href="#galeria" class="hover:text-emerald-600 transition">Galeria</a></li>
-                <li><a href="#quiz" class="hover:text-emerald-600 transition">Quiz</a></li>
+
+            <ul class="nav-links">
+
+                <li><a href="#inicio">Início</a></li>
+
+                <li><a href="#sobre">Sobre</a></li>
+
+                <li><a href="#campoCidade">Campo & Cidade</a></li>
+
+                <li><a href="#temas">Temas</a></li>
+
+                <li><a href="#impacto">Impacto</a></li>
+
+                <li><a href="#galeria">Galeria</a></li>
+
+                <li><a href="#quiz">Quiz</a></li>
+
             </ul>
-            <button id="theme-toggle" class="text-2xl p-2 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-800 transition">
-                🌙
-            </button>
-        </div>
-    </nav>
 
-    <!-- Hero -->
-    <section id="home" class="min-h-screen bg-cover bg-center flex items-center relative"
-             style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://source.unsplash.com/1920x1080/?sustainable-farming')">
-        <div class="max-w-7xl mx-auto px-6 text-center text-white pt-20">
-            <h2 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-                Agro Forte,<br>Futuro Sustentável
-            </h2>
-            <p class="text-2xl md:text-3xl mb-10 max-w-3xl mx-auto">
-                Equilíbrio entre produção e meio ambiente
+            <div class="nav-buttons">
+
+                <button id="themeBtn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button id="menuBtn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section id="inicio" class="hero">
+
+        <video autoplay muted loop playsinline>
+
+            <source src="assets/video.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+
+                AGRINHO 2026
+
+            </span>
+
+            <h1>
+
+                O FUTURO
+                <span>BROTA DA TERRA</span>
+
+            </h1>
+
+            <p>
+
+                Educação, tecnologia e sustentabilidade
+                trabalhando juntas para transformar o
+                campo e construir um futuro melhor.
+
             </p>
-            <a href="#simulador" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-xl font-semibold px-10 py-5 rounded-2xl transition transform hover:scale-105">
-                Experimentar Simulador
+
+            <div class="hero-buttons">
+
+                <a href="#sobre" class="btn-primary">
+
+                    Explorar Projeto
+
+                </a>
+
+                <a href="#video" class="btn-secondary">
+
+                    Assistir Vídeo
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE -->
+
+    <section id="sobre" class="about">
+
+        <div class="about-image">
+
+            <img src="assets/hero.jpg" alt="Agrinho">
+
+        </div>
+
+        <div class="about-content">
+
+            <span class="section-tag">
+
+                SOBRE O AGRINHO
+
+            </span>
+
+            <h2>
+
+                Um projeto que conecta
+                educação e inovação
+
+            </h2>
+
+            <p>
+
+                O Agrinho é um dos maiores programas
+                educacionais do Brasil, incentivando
+                estudantes a refletirem sobre cidadania,
+                sustentabilidade e inovação.
+
+            </p>
+
+            <p>
+
+                Em 2026 o objetivo é mostrar como o
+                campo e a cidade podem crescer juntos
+                utilizando tecnologia e consciência
+                ambiental.
+
+            </p>
+
+            <div class="about-features">
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <span>Sustentabilidade</span>
+
+                </div>
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    <span>Tecnologia</span>
+
+                </div>
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-earth-americas"></i>
+
+                    <span>Futuro Verde</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CAMPO X CIDADE -->
+
+    <section id="campoCidade" class="campo-cidade">
+
+        <div class="section-header">
+
+            <span>CONEXÃO</span>
+
+            <h2>Campo e Cidade Unidos</h2>
+
+        </div>
+
+        <div class="connection-grid">
+
+            <div class="connection-card">
+
+                <i class="fa-solid fa-tractor"></i>
+
+                <h3>Campo</h3>
+
+                <p>
+
+                    Produção de alimentos,
+                    preservação ambiental e inovação.
+
+                </p>
+
+            </div>
+
+            <div class="connection-card center-card">
+
+                <i class="fa-solid fa-arrows-left-right"></i>
+
+            </div>
+
+            <div class="connection-card">
+
+                <i class="fa-solid fa-city"></i>
+
+                <h3>Cidade</h3>
+
+                <p>
+
+                    Consumo consciente,
+                    tecnologia e desenvolvimento.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TEMAS -->
+
+    <section id="temas" class="themes">
+
+        <div class="section-header">
+
+            <span>TEMAS</span>
+
+            <h2>Áreas do Futuro</h2>
+
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                </div>
+
+                <h3>Sustentabilidade</h3>
+
+                <p>
+
+                    Preservando recursos para as futuras gerações.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                </div>
+
+                <h3>AgroTech</h3>
+
+                <p>
+
+                    Inteligência artificial e automação rural.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                </div>
+
+                <h3>Água</h3>
+
+                <p>
+
+                    Uso consciente dos recursos hídricos.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-solar-panel"></i>
+
+                </div>
+
+                <h3>Energia Limpa</h3>
+
+                <p>
+
+                    Fontes renováveis para um futuro sustentável.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ESTATÍSTICAS -->
+
+    <section id="impacto" class="stats">
+
+        <div class="section-header">
+
+            <span>IMPACTO</span>
+
+            <h2>Números do Agrinho</h2>
+
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-box">
+
+                <h3 class="counter" data-target="2000000">0</h3>
+
+                <p>Estudantes</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3 class="counter" data-target="8000">0</h3>
+
+                <p>Escolas</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3 class="counter" data-target="27">0</h3>
+
+                <p>Estados</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3 class="counter" data-target="100">0</h3>
+
+                <p>Projetos</p>
+
+            </div>
+
+        </div>
+
+    </section>
+<!-- TIMELINE -->
+
+    <section class="timeline">
+
+        <div class="section-header">
+
+            <span>EVOLUÇÃO</span>
+
+            <h2>Linha do Tempo Agrinho</h2>
+
+        </div>
+
+        <div class="timeline-container">
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>Início do Projeto</h3>
+
+                    <p>
+                        Surgimento do Agrinho com foco
+                        na educação e cidadania.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>Expansão Nacional</h3>
+
+                    <p>
+                        Milhares de escolas passaram
+                        a participar do programa.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>Transformação Digital</h3>
+
+                    <p>
+                        Inclusão de temas ligados
+                        à tecnologia e inovação.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>Agrinho 2026</h3>
+
+                    <p>
+                        Conexão entre campo,
+                        cidade e sustentabilidade.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALERIA -->
+
+    <section id="galeria" class="gallery">
+
+        <div class="section-header">
+
+            <span>GALERIA</span>
+
+            <h2>Momentos Inspiradores</h2>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <img src="assets/gallery1.jpg" alt="">
+            <img src="assets/gallery2.jpg" alt="">
+            <img src="assets/gallery3.jpg" alt="">
+            <img src="assets/gallery4.jpg" alt="">
+            <img src="assets/gallery5.jpg" alt="">
+            <img src="assets/gallery6.jpg" alt="">
+            <img src="assets/gallery7.jpg" alt="">
+            <img src="assets/gallery8.jpg" alt="">
+
+        </div>
+
+    </section>
+
+    <!-- VÍDEO -->
+
+    <section id="video" class="video-section">
+
+        <div class="section-header">
+
+            <span>VÍDEO</span>
+
+            <h2>Conheça o Agrinho</h2>
+
+        </div>
+
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <!-- QUIZ -->
+
+    <section id="quiz" class="quiz">
+
+        <div class="quiz-container">
+
+            <div class="quiz-header">
+
+                <span>DESAFIO</span>
+
+                <h2>Quiz Agrinho</h2>
+
+            </div>
+
+            <div class="quiz-card">
+
+                <p id="question">
+
+                    Qual é a principal importância
+                    das árvores para o planeta?
+
+                </p>
+
+                <div class="answers">
+
+                    <button class="answer">
+                        Produzir Oxigênio
+                    </button>
+
+                    <button class="answer">
+                        Produzir Concreto
+                    </button>
+
+                    <button class="answer">
+                        Produzir Metal
+                    </button>
+
+                    <button class="answer">
+                        Produzir Plástico
+                    </button>
+
+                </div>
+
+                <div id="result"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="cta-content">
+
+            <h2>
+                Juntos Construímos o Futuro
+            </h2>
+
+            <p>
+
+                Educação, tecnologia e sustentabilidade
+                transformando vidas.
+
+            </p>
+
+            <a href="#inicio" class="btn-primary">
+
+                Voltar ao Início
+
             </a>
+
         </div>
+
     </section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16 text-emerald-700 dark:text-emerald-500">Sobre o Projeto</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <div class="bg-emerald-50 dark:bg-emerald-950 p-8 rounded-3xl">
-                        <i class="fa-solid fa-seedling text-5xl text-emerald-600 mb-4"></i>
-                        <h3 class="text-2xl font-semibold mb-3">O Desafio</h3>
-                        <p class="text-lg">Produzir alimentos de forma eficiente sem comprometer o futuro do planeta.</p>
-                    </div>
-                    <div class="bg-emerald-50 dark:bg-emerald-950 p-8 rounded-3xl">
-                        <i class="fa-solid fa-leaf text-5xl text-emerald-600 mb-4"></i>
-                        <h3 class="text-2xl font-semibold mb-3">Nossa Solução</h3>
-                        <p class="text-lg">Tecnologia + Conhecimento = Agricultura Regenerativa</p>
-                    </div>
-                </div>
-                <img src="https://source.unsplash.com/800x600/?farm-drone" class="rounded-3xl shadow-2xl" alt="Agricultura moderna">
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div class="footer-logo">
+
+                <h2>AGRINHO 2026</h2>
+
+                <p>
+
+                    O futuro brota da terra.
+
+                </p>
+
             </div>
-        </div>
-    </section>
 
-    <!-- Simulador -->
-    <section id="simulador" class="py-20 bg-emerald-950 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-4">Simulador de Equilíbrio</h2>
-            <p class="text-center text-xl mb-12 text-emerald-300">Ajuste e veja o impacto em tempo real</p>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Controls -->
-                <div class="space-y-10">
-                    <div>
-                        <label class="block text-lg mb-3">Intensidade de Produção</label>
-                        <input type="range" id="producao" min="10" max="100" value="60" class="w-full accent-emerald-500">
-                        <div class="flex justify-between text-sm mt-1">
-                            <span>Baixa</span><span id="producao-val" class="font-bold">60%</span><span>Alta</span>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-lg mb-3">Práticas Sustentáveis</label>
-                        <input type="range" id="sustentabilidade" min="10" max="100" value="70" class="w-full accent-emerald-500">
-                        <div class="flex justify-between text-sm mt-1">
-                            <span>Baixa</span><span id="sustentabilidade-val" class="font-bold">70%</span><span>Alta</span>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-emerald-900/50 p-8 rounded-3xl">
-                        <p class="text-2xl mb-4">Resultado:</p>
-                        <p>Produção: <strong id="result-prod" class="text-emerald-400">Boa</strong></p>
-                        <p>Meio Ambiente: <strong id="result-amb" class="text-emerald-400">Saudável</strong></p>
-                        <div class="h-6 bg-gray-700 rounded-full mt-6 overflow-hidden">
-                            <div id="balance-fill" class="h-full bg-gradient-to-r from-red-500 to-emerald-500 w-3/4 transition-all"></div>
-                        </div>
-                    </div>
+            <div class="footer-links">
+
+                <h3>Links</h3>
+
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#temas">Temas</a>
+                <a href="#galeria">Galeria</a>
+
+            </div>
+
+            <div class="footer-social">
+
+                <h3>Redes</h3>
+
+                <div class="social-icons">
+
+                    <i class="fab fa-instagram"></i>
+
+                    <i class="fab fa-youtube"></i>
+
+                    <i class="fab fa-facebook"></i>
+
+                    <i class="fab fa-linkedin"></i>
+
                 </div>
 
-                <!-- Visual Farm -->
-                <div class="relative">
-                    <img id="farm-img" src="https://source.unsplash.com/800x600/?sustainable-farm" 
-                         class="rounded-3xl shadow-2xl transition-all duration-700" alt="Fazenda">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-3xl flex items-end p-8">
-                        <div class="text-white">
-                            <p id="status" class="text-3xl font-bold">Equilíbrio Perfeito 🌱</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Galeria -->
-    <section id="galeria" class="py-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16">Práticas Sustentáveis</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <img src="https://source.unsplash.com/600x400/?agroforestry" class="rounded-3xl shadow-xl hover:scale-105 transition" alt="Agrofloresta">
-                <img src="https://source.unsplash.com/600x400/?precision-agriculture" class="rounded-3xl shadow-xl hover:scale-105 transition" alt="Agricultura de Precisão">
-                <img src="https://source.unsplash.com/600x400/?regenerative-farming" class="rounded-3xl shadow-xl hover:scale-105 transition" alt="Agricultura Regenerativa">
-            </div>
         </div>
-    </section>
 
-    <!-- Quiz -->
-    <section id="quiz" class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-12">Quiz Sustentável</h2>
-            <div id="quiz-container" class="bg-gray-100 dark:bg-gray-800 p-10 rounded-3xl">
-                <!-- JS preenche aqui -->
-            </div>
-        </div>
-    </section>
+        <div class="footer-bottom">
 
-    <footer class="bg-emerald-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-2xl mb-4">🌱 AgroEquilíbrio - Agrinho 2026</p>
-            <p>Desenvolvido por [SEU NOME] • [SÉRIE/TURMA]</p>
-            <p class="mt-6 text-sm opacity-75">Código 100% autoral • Imagens de Unsplash</p>
+            <p>
+
+                © 2026 Agrinho.
+                Todos os direitos reservados.
+
+            </p>
+
         </div>
+
     </footer>
 
+    <!-- LIGHTBOX -->
+
+    <div class="lightbox">
+
+        <span class="close-lightbox">
+
+            &times;
+
+        </span>
+
+        <img id="lightbox-img">
+
+    </div>
+
+    <!-- BOTÃO TOPO -->
+
+    <button id="scrollTop">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
     <script src="script.js"></script>
+
 </body>
 </html>
