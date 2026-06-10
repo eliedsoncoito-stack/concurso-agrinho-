@@ -1,3 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrinho 2026</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f8fb;
+    color:#222;
+}
+
+header{
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:#56cfe1;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.hero{
+    margin-top:80px;
+    min-height:75vh;
+    background:linear-gradient(135deg,#7ce7e7,#56cfe1);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#56cfe1;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+section{
+    padding:80px 0;
+}
+
+.titulo{
+    text-align:center;
+    color:#56cfe1;
+    margin-bottom:50px;
+    font-size:2.5rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:#56cfe1;
+    margin-bottom:10px;
+}
+
+footer{
+    background:#56cfe1;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.menu{
+    display:none;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">🌱 Agrinho 2026</div>
+
+<div class="menu">
+<a href="#">Início</a>
+<a href="#">Agricultura</a>
+<a href="#">Sustentabilidade</a>
+<a href="#">Tecnologia</a>
+</div>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div>
+<h1>Agro Forte, Futuro Sustentável</h1>
+<p>
+Construindo um futuro melhor através da tecnologia,
+educação e sustentabilidade no campo.
+</p>
+
+<a href="#" class="btn">Saiba Mais</a>
+</div>
+</section>
+
 <section>
 <div class="container">
 
@@ -6,53 +194,54 @@
 <div class="cards">
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1000" alt="Agricultura">
+
+<div class="card-content">
 <h3>🌾 Agricultura</h3>
-<p>
-A agricultura é fundamental para a produção de alimentos,
-geração de empregos e desenvolvimento econômico do Brasil.
-O campo abastece cidades e garante recursos para diversas
-atividades da sociedade.
-</p>
 
-<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800"
-alt="Agricultura">
+<p>
+A agricultura é uma das atividades mais importantes do Brasil.
+Ela fornece alimentos para milhões de pessoas e contribui para
+o crescimento econômico do país.
+</p>
+</div>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1000" alt="Sustentabilidade">
+
+<div class="card-content">
 <h3>♻️ Sustentabilidade</h3>
-<p>
-A sustentabilidade busca equilibrar o crescimento econômico
-com a preservação ambiental. Pequenas atitudes ajudam a
-proteger a natureza e garantem recursos para as futuras
-gerações.
-</p>
 
-<img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800"
-alt="Sustentabilidade">
+<p>
+A sustentabilidade promove o uso consciente dos recursos naturais,
+garantindo que as futuras gerações possam viver em um ambiente
+equilibrado e saudável.
+</p>
+</div>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1501706362039-c6e80948f11f?w=1000" alt="Tecnologia">
+
+<div class="card-content">
 <h3>🚜 Tecnologia no Campo</h3>
+
 <p>
-A tecnologia facilita o trabalho rural através de máquinas,
-sensores e sistemas inteligentes, aumentando a produtividade
-e reduzindo desperdícios.
+A tecnologia ajuda os produtores rurais a aumentar a produtividade,
+reduzir desperdícios e melhorar a qualidade dos alimentos produzidos.
 </p>
-
-<img src="https://images.unsplash.com/photo-1501706362039-c6e80948f11f?w=800"
-alt="Tecnologia">
+</div>
 </div>
 
 </div>
 
 </div>
-</section>.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:15px;
-    margin-top:15px;
-}
+</section>
+
 <footer>
 <p>© 2026 Agrinho - Site feito por aluno Eliedson</p>
 </footer>
+
+</body>
+</html>
