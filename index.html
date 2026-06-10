@@ -22,7 +22,7 @@ body{
 
 header{
     background:white;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
     position:fixed;
     width:100%;
     top:0;
@@ -45,7 +45,7 @@ nav{
 .logo{
     font-size:2rem;
     font-weight:700;
-    color:#56cfe1;
+    color:#4ecdc4;
 }
 
 .menu{
@@ -60,35 +60,40 @@ nav{
 }
 
 .hero{
-    margin-top:80px;
-    min-height:75vh;
+    margin-top:90px;
+    min-height:80vh;
     background:linear-gradient(135deg,#7ce7e7,#56cfe1);
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
     color:white;
     padding:40px;
 }
 
-.hero h1{
+.hero-content h1{
     font-size:4rem;
     margin-bottom:20px;
 }
 
-.hero p{
+.hero-content p{
     font-size:1.2rem;
     margin-bottom:25px;
 }
 
 .btn{
     display:inline-block;
+    padding:14px 30px;
     background:white;
     color:#56cfe1;
     text-decoration:none;
-    padding:14px 28px;
     border-radius:50px;
-    font-weight:bold;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
 }
 
 section{
@@ -97,42 +102,32 @@ section{
 
 .titulo{
     text-align:center;
-    color:#56cfe1;
-    margin-bottom:50px;
     font-size:2.5rem;
+    margin-bottom:50px;
+    color:#56cfe1;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
 .card{
     background:white;
     border-radius:25px;
-    overflow:hidden;
+    padding:25px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
+    transform:translateY(-10px);
 }
 
 .card h3{
+    margin-bottom:15px;
     color:#56cfe1;
-    margin-bottom:10px;
 }
 
 footer{
@@ -140,12 +135,11 @@ footer{
     color:white;
     text-align:center;
     padding:30px;
-    margin-top:50px;
 }
 
 @media(max-width:768px){
 
-.hero h1{
+.hero-content h1{
     font-size:2.5rem;
 }
 
@@ -166,21 +160,18 @@ footer{
 
 <div class="menu">
 <a href="#">Início</a>
-<a href="#">Agricultura</a>
+<a href="#">Agro</a>
 <a href="#">Sustentabilidade</a>
-<a href="#">Tecnologia</a>
+<a href="#">Contato</a>
 </div>
 </nav>
 </div>
 </header>
 
 <section class="hero">
-<div>
+<div class="hero-content">
 <h1>Agro Forte, Futuro Sustentável</h1>
-<p>
-Construindo um futuro melhor através da tecnologia,
-educação e sustentabilidade no campo.
-</p>
+<p>Construindo um futuro melhor através da tecnologia, educação e sustentabilidade no campo.</p>
 
 <a href="#" class="btn">Saiba Mais</a>
 </div>
@@ -194,44 +185,18 @@ educação e sustentabilidade no campo.
 <div class="cards">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1000" alt="Agricultura">
-
-<div class="card-content">
 <h3>🌾 Agricultura</h3>
-
-<p>
-A agricultura é uma das atividades mais importantes do Brasil.
-Ela fornece alimentos para milhões de pessoas e contribui para
-o crescimento econômico do país.
-</p>
-</div>
+<p>A agricultura é essencial para a produção de alimentos e para o desenvolvimento econômico do país.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1000" alt="Sustentabilidade">
-
-<div class="card-content">
 <h3>♻️ Sustentabilidade</h3>
-
-<p>
-A sustentabilidade promove o uso consciente dos recursos naturais,
-garantindo que as futuras gerações possam viver em um ambiente
-equilibrado e saudável.
-</p>
-</div>
+<p>Práticas sustentáveis ajudam a preservar os recursos naturais para as futuras gerações.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1501706362039-c6e80948f11f?w=1000" alt="Tecnologia">
-
-<div class="card-content">
-<h3>🚜 Tecnologia no Campo</h3>
-
-<p>
-A tecnologia ajuda os produtores rurais a aumentar a produtividade,
-reduzir desperdícios e melhorar a qualidade dos alimentos produzidos.
-</p>
-</div>
+<h3>🚜 Tecnologia</h3>
+<p>O uso de máquinas e inovação aumenta a produtividade e melhora a qualidade de vida no campo.</p>
 </div>
 
 </div>
@@ -240,7 +205,7 @@ reduzir desperdícios e melhorar a qualidade dos alimentos produzidos.
 </section>
 
 <footer>
-<p>© 2026 Agrinho - Site feito por aluno Eliedson</p>
+<p>© 2026 Agrinho - Projeto Escolar</p>
 </footer>
 
 </body>
