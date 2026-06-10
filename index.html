@@ -44,14 +44,14 @@
         .logo {
             display: flex;
             align-items: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
         }
 
         .hero {
             margin-top: 100px;
-            background: url('https://images.unsplash.com/photo-1625246333192-9f8f3f4b5f5b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
-            height: 90vh;
+            background: url('https://images.unsplash.com/photo-1500595046743-3c3e6e6e6e6e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+            height: 85vh;
             display: flex;
             align-items: center;
             color: white;
@@ -63,23 +63,23 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: rgba(0, 166, 81, 0.78);
+            background: rgba(0, 166, 81, 0.75);
         }
 
         .hero-content {
             position: relative;
-            max-width: 750px;
+            max-width: 800px;
         }
 
         .hero h1 {
             font-family: 'Fredoka', sans-serif;
-            font-size: 4.5rem;
-            line-height: 1.1;
+            font-size: 4.8rem;
+            line-height: 1.05;
             margin-bottom: 25px;
         }
 
         .hero p {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             margin-bottom: 20px;
         }
 
@@ -87,7 +87,7 @@
 
         h2 {
             font-family: 'Fredoka', sans-serif;
-            font-size: 3rem;
+            font-size: 3.2rem;
             text-align: center;
             margin-bottom: 60px;
             color: var(--verde);
@@ -111,8 +111,14 @@
 
         .card img {
             width: 100%;
-            height: 240px;
+            height: 260px;
             object-fit: cover;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         footer {
@@ -120,12 +126,6 @@
             color: white;
             text-align: center;
             padding: 60px 20px;
-        }
-
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
         }
     </style>
 </head>
@@ -135,12 +135,11 @@
         <div class="container">
             <nav>
                 <div class="logo">🌱 <span>Agrinho 2026</span></div>
-                <ul class="menu" style="display:flex; gap:30px; list-style:none;">
-                    <li><a href="#" style="color:white; text-decoration:none;">Início</a></li>
-                    <li><a href="#" style="color:white; text-decoration:none;">O Programa</a></li>
-                    <li><a href="#" style="color:white; text-decoration:none;">Tema 2026</a></li>
-                    <li><a href="#" style="color:white; text-decoration:none;">Inscrições</a></li>
-                    <li><a href="#" style="color:white; text-decoration:none;">Galeria</a></li>
+                <ul style="display:flex; gap:30px; list-style:none;">
+                    <li><a href="#" style="color:white; text-decoration:none; font-weight:600;">Início</a></li>
+                    <li><a href="#" style="color:white; text-decoration:none; font-weight:600;">O Programa</a></li>
+                    <li><a href="#" style="color:white; text-decoration:none; font-weight:600;">Tema 2026</a></li>
+                    <li><a href="#" style="color:white; text-decoration:none; font-weight:600;">Galeria</a></li>
                 </ul>
             </nav>
         </div>
@@ -149,8 +148,8 @@
     <section class="hero">
         <div class="container hero-content">
             <h1>Agro Forte,<br>Futuro Sustentável</h1>
-            <p>O Programa Agrinho 2026 chega com o tema <strong>"Agro Forte, Futuro Sustentável"</strong>, convidando crianças de todo o Brasil a aprenderem sobre produção responsável, preservação ambiental e o protagonismo infantil no campo.</p>
-            <p>Desenvolvido pelo Sistema FAEP/SENAR, o projeto estimula alunos da educação básica a criarem desenhos, redações e projetos que conectam o mundo da escola com o mundo do agronegócio sustentável.</p>
+            <p>O Programa Agrinho 2026 é uma iniciativa do Sistema FA/SENAR que une educação e campo. Por meio de desenhos, redações e projetos, as crianças aprendem sobre agricultura sustentável, preservação do meio ambiente e o papel importante delas no futuro do agronegócio brasileiro.</p>
+            <p>Com muita criatividade e alegria, alunos de escolas públicas e privadas exploram temas importantes enquanto se divertem e se conectam com a realidade rural.</p>
         </div>
     </section>
 
@@ -159,24 +158,24 @@
             <h2>Tema 2026</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1500595046743-3c3e6e6e6e6e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Produção">
-                    <div class="card-content">
+                    <img src="https://images.unsplash.com/photo-1625246333192-9f8f3f4b5f5b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Crianças no campo">
+                    <div class="card-content" style="padding:25px;">
                         <h3>🌾 Produção Responsável</h3>
-                        <p>Aprendendo técnicas sustentáveis de cultivo e pecuária.</p>
+                        <p>Como produzir alimentos de forma sustentável e consciente.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1625246333192-9f8f3f4b5f5b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Preservação">
-                    <div class="card-content">
-                        <h3>🌳 Preservação Ambiental</h3>
-                        <p>Cuidando do solo, da água e da biodiversidade.</p>
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3a9d4b5f5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Preservação">
+                    <div class="card-content" style="padding:25px;">
+                        <h3>🌳 Cuidado com o Meio Ambiente</h3>
+                        <p>Preservando solo, água e a natureza.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1581093458791-9f3c2a5e6f5f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Crianças">
-                    <div class="card-content">
-                        <h3>👦👧 Protagonismo Infantil</h3>
-                        <p>Crianças como protagonistas do futuro do agro.</p>
+                    <img src="https://images.unsplash.com/photo-1581093458791-9f3c2a5e6f5f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Crianças felizes">
+                    <div class="card-content" style="padding:25px;">
+                        <h3>👧👦 Protagonismo Infantil</h3>
+                        <p>Crianças construindo um futuro melhor para o agro.</p>
                     </div>
                 </div>
             </div>
@@ -187,18 +186,18 @@
         <div class="container">
             <h2>Galeria Agrinho</h2>
             <div class="galeria">
-                <img src="https://images.unsplash.com/photo-1500595046743-3c3e6e6e6e6e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" style="width:100%; border-radius:15px;" alt="Criança na roça">
-                <img src="https://images.unsplash.com/photo-1625246333192-9f8f3f4b5f5b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" style="width:100%; border-radius:15px;" alt="Agricultura infantil">
+                <img src="https://images.unsplash.com/photo-1500595046743-3c3e6e6e6e6e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" style="width:100%; border-radius:15px;" alt="Criança feliz na fazenda">
+                <img src="https://images.unsplash.com/photo-1625246333192-9f8f3f4b5f5b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" style="width:100%; border-radius:15px;" alt="Crianças plantando">
                 <img src="https://images.unsplash.com/photo-1581093458791-9f3c2a5e6f5f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" style="width:100%; border-radius:15px;" alt="Meninos no campo">
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3a9d4b5f5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" style="width:100%; border-radius:15px;" alt="Fazenda e crianças">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3a9d4b5f5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" style="width:100%; border-radius:15px;" alt="Agricultura infantil">
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p><strong>Programa Agrinho 2026</strong> – Realizado pelo Sistema FAEP/SENAR</p>
-            <p>🌱 Juntos cultivando um futuro melhor</p>
+            <p><strong>Programa Agrinho 2026</strong> — Educação, Campo e Futuro</p>
+            <p>🌱 Juntos cultivando um Brasil melhor</p>
             <p style="margin-top: 30px; opacity: 0.8;">© 2026 Agrinho - Todos os direitos reservados</p>
         </div>
     </footer>
