@@ -1,192 +1,268 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AgroForte — Futuro Sustentável</title>
-  <meta name="description" content="Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 | Agro Forte, Futuro Sustentável</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka:wght@400;600&display=swap');
+
+        :root {
+            --verde: #00A651;
+            --laranja: #FF6B00;
+            --amarelo: #FFCD00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #E8F5E9, #C8E6C9);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--verde), #008C44);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: var(--amarelo);
+        }
+
+        .hero {
+            margin-top: 100px;
+            background: url('https://images.unsplash.com/photo-1625246333192-9f8f3f4b5f5b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 166, 81, 0.75);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--laranja);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            background: #e65c00;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--verde);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        footer {
+            background: #1B5E20;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="logo">
-        <span class="logo-mark">🌿</span>
-        <span class="logo-text">AgroForte</span>
-      </a>
-      <nav class="main-nav">
-        <a href="#pilares">Pilares</a>
-        <a href="#producao">Produção</a>
-        <a href="#energia">Energia</a>
-        <a href="#missao">Missão</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="top" class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <span class="eyebrow">Agro · Sustentabilidade · Futuro</span>
-      <h1 class="hero-title">
-        Agro forte,<br />
-        <em>futuro sustentável.</em>
-      </h1>
-      <p class="hero-sub">
-        Equilíbrio entre produção e meio ambiente — uma nova forma de cultivar
-        a terra, respeitando o solo, a água e as pessoas.
-      </p>
-      <div class="hero-actions">
-        <button class="btn btn-primary" data-scroll="pilares">
-          Leia mais →
-        </button>
-        <button class="btn btn-ghost" data-scroll="missao">
-          Nossa missão
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- PILARES + TÓPICOS -->
-  <section id="pilares" class="section">
-    <div class="container two-col">
-      <!-- Pilares -->
-      <div>
-        <span class="eyebrow dark">Pilares</span>
-        <h2 class="section-title">Três bases para um agro mais forte.</h2>
-        <p class="section-text">
-          O agro do futuro nasce da união entre tecnologia, respeito ambiental
-          e responsabilidade social. Veja os pilares que sustentam essa visão.
-        </p>
-
-        <div class="pillars">
-          <article class="pillar-card">
-            <div class="pillar-icon">🌱</div>
-            <h3>Produção consciente</h3>
-            <p>Plantios que respeitam ciclos naturais e regeneram o solo.</p>
-            <button class="link-btn" data-scroll="producao">Ver mais →</button>
-          </article>
-
-          <article class="pillar-card">
-            <div class="pillar-icon">🌳</div>
-            <h3>Preservação ativa</h3>
-            <p>Florestas, nascentes e biodiversidade protegidas dentro da fazenda.</p>
-            <button class="link-btn" data-scroll="producao">Ver mais →</button>
-          </article>
-
-          <article class="pillar-card">
-            <div class="pillar-icon">☀️</div>
-            <h3>Energia limpa</h3>
-            <p>Solar, biogás e eficiência energética no campo.</p>
-            <button class="link-btn" data-scroll="energia">Ver mais →</button>
-          </article>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    🌱 <span>Agrinho 2026</span>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">O Programa</a></li>
+                    <li><a href="#">Tema 2026</a></li>
+                    <li><a href="#">Inscrições</a></li>
+                    <li><a href="#">Galeria</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <!-- Tópicos em alta -->
-      <aside class="topics">
-        <span class="eyebrow dark">Tópicos em alta</span>
-        <h2 class="section-title small">O que está movendo o campo.</h2>
-
-        <div class="search">
-          <span>🔎</span>
-          <input id="topic-search" type="text" placeholder="Buscar tópico..." />
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Agro Forte,<br>Futuro Sustentável</h1>
+            <p>Programa Agrinho 2026 – Conectando crianças, campo e sustentabilidade!</p>
+            <a href="#" class="btn">Inscreva sua escola agora!</a>
         </div>
+    </section>
 
-        <ul class="topic-list" id="topic-list">
-          <li data-topic="solo">Saúde do solo</li>
-          <li data-topic="agua">Gestão da água</li>
-          <li data-topic="solar">Energia solar no campo</li>
-          <li data-topic="carbono">Crédito de carbono</li>
-          <li data-topic="biodiversidade">Biodiversidade</li>
-        </ul>
-
-        <div id="topic-info" class="topic-info">
-          Selecione um tópico para saber mais.
+    <section>
+        <div class="container">
+            <h2>Tema 2026</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1500595046743-3c3e6e6e6e6e" alt="Produção">
+                    <div class="card-content">
+                        <h3>🌾 Produção Responsável</h3>
+                        <p>Aprendendo a produzir alimentos de forma sustentável.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3a9d4b5f5" alt="Meio Ambiente">
+                    <div class="card-content">
+                        <h3>🌳 Preservação</h3>
+                        <p>Cuidando do solo, água e biodiversidade.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1581093458791-9f3c2a5e6f5f" alt="Crianças">
+                    <div class="card-content">
+                        <h3>👦👧 Protagonismo Infantil</h3>
+                        <p>Crianças construindo o futuro do agro.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </aside>
-    </div>
-  </section>
+    </section>
 
-  <!-- PRODUÇÃO / PRESERVAÇÃO / ENERGIA -->
-  <section id="producao" class="section section-alt">
-    <div class="container">
-      <span class="eyebrow dark">Equilíbrio</span>
-      <h2 class="section-title">Produzir e preservar caminham juntos.</h2>
+    <section style="background: white;">
+        <div class="container">
+            <h2>Galeria de Trabalhos</h2>
+            <div class="galeria">
+                <!-- Você pode substituir por imagens reais dos alunos -->
+                <img src="https://picsum.photos/300/300?random=1" alt="Desenho Agrinho" style="border-radius:15px;">
+                <img src="https://picsum.photos/300/300?random=2" alt="Desenho Agrinho" style="border-radius:15px;">
+                <img src="https://picsum.photos/300/300?random=3" alt="Desenho Agrinho" style="border-radius:15px;">
+                <img src="https://picsum.photos/300/300?random=4" alt="Desenho Agrinho" style="border-radius:15px;">
+            </div>
+        </div>
+    </section>
 
-      <div class="features">
-        <article class="feature">
-          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Plantação" />
-          <h3>A Produção</h3>
-          <p>Tecnologia de precisão, manejo integrado e respeito ao solo
-            elevam a produtividade sem agredir o ambiente.</p>
-        </article>
+    <footer>
+        <div class="container">
+            <p><strong>Programa Agrinho 2026</strong> – Realizado pelo SENAR / FAEP / FAEG / FAES (conforme seu estado)</p>
+            <p>🌱 Juntos cultivando um futuro melhor</p>
+            <p style="margin-top: 30px; opacity: 0.8;">© 2026 Agrinho - Todos os direitos reservados</p>
+        </div>
+    </footer>
 
-        <article class="feature">
-          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80" alt="Floresta" />
-          <h3>A Preservação</h3>
-          <p>Áreas de reserva, recuperação de nascentes e corredores
-            ecológicos garantem o futuro da biodiversidade.</p>
-        </article>
-
-        <article class="feature">
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Energia Solar" />
-          <h3>A Energia</h3>
-          <p>Painéis solares, biogás e eficiência energética reduzem
-            custos e emissões no campo.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOLAR -->
-  <section id="energia" class="section solar-section">
-    <div class="container two-col">
-      <div>
-        <span class="eyebrow">Energia</span>
-        <h2 class="section-title light">O sol é o novo combustível do agro.</h2>
-        <p class="section-text light">
-          A energia solar já alimenta irrigação, ordenha, armazéns e estufas.
-          Uma fazenda movida pelo sol é uma fazenda mais lucrativa e
-          ambientalmente responsável.
-        </p>
-      </div>
-      <div class="solar-img">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1000&q=80" alt="Painéis solares no campo" />
-      </div>
-    </div>
-  </section>
-
-  <!-- MISSÃO / CTA -->
-  <section id="missao" class="section cta-section">
-    <div class="container cta-inner">
-      <img src="https://images.unsplash.com/photo-1592982537447-7440770faae9?w=1000&q=80" alt="Trator no campo" />
-      <div>
-        <span class="eyebrow dark">Missão</span>
-        <h2 class="section-title">Cultivar hoje, sem comprometer o amanhã.</h2>
-        <p class="section-text">
-          Nossa missão é mostrar que produção e preservação não são opostos —
-          são parceiros. Um agro forte é, antes de tudo, um agro sustentável.
-        </p>
-        <button class="btn btn-primary" data-scroll="top">
-          Conheça nossa missão →
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026. Site feito por aluno Eliedson</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
