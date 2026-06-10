@@ -1,213 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 | Agro Forte, Futuro Sustentável</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka:wght@400;600&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrinho 2026</title>
 
-        :root {
-            --verde: #00A651;
-            --laranja: #FF6B00;
-            --amarelo: #FFCD00;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom, #E8F5E9, #C8E6C9);
-            color: #333;
-            line-height: 1.6;
-        }
+body{
+    background:#f4f8fb;
+    color:#222;
+}
 
-        header {
-            background: linear-gradient(135deg, var(--verde), #008C44);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+header{
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
 
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-        }
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:#4ecdc4;
+}
 
-        .hero {
-            margin-top: 100px;
-            background: url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
-            height: 85vh;
-            display: flex;
-            align-items: center;
-            color: white;
-            position: relative;
-        }
+.menu{
+    display:flex;
+    gap:20px;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 166, 81, 0.75);
-        }
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
 
-        .hero-content {
-            position: relative;
-            max-width: 800px;
-        }
+.hero{
+    margin-top:90px;
+    min-height:80vh;
+    background:linear-gradient(135deg,#7ce7e7,#56cfe1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
 
-        .hero h1 {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 4.8rem;
-            line-height: 1.05;
-            margin-bottom: 25px;
-        }
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
 
-        .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-        }
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
 
-        section { padding: 100px 0; }
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:white;
+    color:#56cfe1;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
 
-        h2 {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 3.2rem;
-            text-align: center;
-            margin-bottom: 60px;
-            color: var(--verde);
-        }
+.btn:hover{
+    transform:translateY(-5px);
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
+section{
+    padding:80px 0;
+}
 
-        .card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: 0.4s;
-        }
+.titulo{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#56cfe1;
+}
 
-        .card:hover { transform: translateY(-15px); }
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
 
-        .card img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-        }
+.card{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+.card:hover{
+    transform:translateY(-10px);
+}
 
-        .galeria img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
+.card h3{
+    margin-bottom:15px;
+    color:#56cfe1;
+}
 
-        footer {
-            background: #1B5E20;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-    </style>
+footer{
+    background:#56cfe1;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.5rem;
+}
+
+.menu{
+    display:none;
+}
+
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">🌱 <span>Agrinho 2026</span></div>
-                <ul style="display:flex; gap:30px; list-style:none;">
-                    <li><a href="#" style="color:white; text-decoration:none; font-weight:600;">Início</a></li>
-                    <li><a href="#" style="color:white; text-decoration:none; font-weight:600;">O Programa</a></li>
-                    <li><a href="#" style="color:white; text-decoration:none; font-weight:600;">Tema 2026</a></li>
-                    <li><a href="#" style="color:white; text-decoration:none; font-weight:600;">Galeria</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+<div class="container">
+<nav>
+<div class="logo">🌱 Agrinho 2026</div>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Agro Forte,<br>Futuro Sustentável</h1>
-            <p>O Programa Agrinho 2026 é uma iniciativa do Sistema FA/SENAR que une educação e campo. Por meio de desenhos, redações e projetos, as crianças aprendem sobre agricultura sustentável, preservação do meio ambiente e o papel importante delas no futuro do agronegócio brasileiro.</p>
-            <p>Com muita criatividade e alegria, alunos exploram temas importantes enquanto se divertem e se conectam com a realidade rural.</p>
-        </div>
-    </section>
+<div class="menu">
+<a href="#">Início</a>
+<a href="#">Agro</a>
+<a href="#">Sustentabilidade</a>
+<a href="#">Contato</a>
+</div>
+</nav>
+</div>
+</header>
 
-    <section>
-        <div class="container">
-            <h2>Tema 2026</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="https://picsum.photos/id/1015/800/600" alt="Crianças no campo">
-                    <div class="card-content" style="padding:25px;">
-                        <h3>🌾 Produção Responsável</h3>
-                        <p>Como produzir alimentos de forma sustentável e consciente.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://picsum.photos/id/133/800/600" alt="Preservação">
-                    <div class="card-content" style="padding:25px;">
-                        <h3>🌳 Cuidado com o Meio Ambiente</h3>
-                        <p>Preservando solo, água e a natureza.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://picsum.photos/id/201/800/600" alt="Crianças felizes">
-                    <div class="card-content" style="padding:25px;">
-                        <h3>👧👦 Protagonismo Infantil</h3>
-                        <p>Crianças construindo um futuro melhor para o agro.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+<div class="hero-content">
+<h1>Agro Forte, Futuro Sustentável</h1>
+<p>Construindo um futuro melhor através da tecnologia, educação e sustentabilidade no campo.</p>
 
-    <section style="background: white;">
-        <div class="container">
-            <h2>Galeria Agrinho</h2>
-            <div class="galeria">
-                <img src="https://picsum.photos/id/1015/800/600" alt="Criança na fazenda">
-                <img src="https://picsum.photos/id/133/800/600" alt="Crianças plantando">
-                <img src="https://picsum.photos/id/201/800/600" alt="Meninos no campo">
-                <img src="https://picsum.photos/id/251/800/600" alt="Agricultura e crianças">
-            </div>
-        </div>
-    </section>
+<a href="#" class="btn">Saiba Mais</a>
+</div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p><strong>Programa Agrinho 2026</strong> — Educação, Campo e Futuro</p>
-            <p>🌱 Juntos cultivando um Brasil melhor</p>
-            <p style="margin-top: 30px; opacity: 0.8;">© 2026 Agrinho - Todos os direitos reservados</p>
-        </div>
-    </footer>
+<section>
+<div class="container">
+
+<h2 class="titulo">Temas Principais</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌾 Agricultura</h3>
+<p>A agricultura é essencial para a produção de alimentos e para o desenvolvimento econômico do país.</p>
+</div>
+
+<div class="card">
+<h3>♻️ Sustentabilidade</h3>
+<p>Práticas sustentáveis ajudam a preservar os recursos naturais para as futuras gerações.</p>
+</div>
+
+<div class="card">
+<h3>🚜 Tecnologia</h3>
+<p>O uso de máquinas e inovação aumenta a produtividade e melhora a qualidade de vida no campo.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Agrinho - Projeto Escolar</p>
+</footer>
 
 </body>
 </html>
