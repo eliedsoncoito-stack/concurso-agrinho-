@@ -1,164 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
-
-:root {
-    --roxo: #C026D3;
-    --rosa: #FF00FF;
-    --verde: #22C55E;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0A0A0A, #1A0033, #2A0044);
-    color: #E0E0E0;
-    min-height: 100vh;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(192, 38, 211, 0.3);
+body{
+    background:#f5f8fa;
+    color:#222;
 }
 
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container{
+    width:90%;
+    margin:auto;
 }
 
-.logo {
-    font-size: 2.3rem;
-    font-weight: 900;
-    color: var(--roxo);
-    text-shadow: 0 0 20px var(--rosa);
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-.menu {
-    display: flex;
-    gap: 40px;
-    list-style: none;
+.btn{
+    background:#7ce7e7;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-.menu a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
-.menu a:hover {
-    color: var(--rosa);
-    text-shadow: 0 0 15px var(--rosa);
+.hero{
+    background:linear-gradient(
+        135deg,
+        #8ceeee,
+        #63d6d6
+    );
+    
+    border-radius:30px;
+    padding:40px;
+    
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+.hero img{
+    max-width:350px;
 }
 
-.hero-content {
-    z-index: 2;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
 }
 
-.hero h1 {
-    font-size: 6.5rem;
-    font-weight: 900;
-    background: linear-gradient(90deg, #C026D3, #FF00FF, #22C55E);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
-    text-shadow: 0 0 40px rgba(192, 38, 211, 0.6);
-}
-
-.hero p {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
-
-.btn {
-    background: linear-gradient(45deg, var(--roxo), var(--rosa));
-    color: white;
-    padding: 18px 50px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.4s;
-    box-shadow: 0 0 30px rgba(192, 38, 211, 0.6);
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 50px rgba(255, 0, 255, 0.8);
-}
-
-section {
-    padding: 120px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-h2 {
-    font-size: 3.5rem;
-    text-align: center;
-    margin-bottom: 60px;
-    color: var(--rosa);
-}
-
-.content {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.section-dark {
-    background: rgba(26, 0, 51, 0.6);
-}
-
-.conquistas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.item {
-    background: rgba(255,255,255,0.05);
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(192, 38, 211, 0.3);
-    transition: 0.3s;
-}
-
-.item:hover {
-    transform: translateY(-10px);
-    border-color: var(--rosa);
-}
-
-footer {
-    text-align: center;
-    padding: 60px 20px;
-    background: #0A0A0A;
-    border-top: 1px solid rgba(192, 38, 211, 0.3);
-    font-size: 1.1rem;
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
 }
