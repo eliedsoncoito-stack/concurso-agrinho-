@@ -3,266 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 | Agro Forte, Futuro Sustentável</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka:wght@400;600&display=swap');
-
-        :root {
-            --verde: #00A651;
-            --laranja: #FF6B00;
-            --amarelo: #FFCD00;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom, #E8F5E9, #C8E6C9);
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--verde), #008C44);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .logo img {
-            height: 60px;
-            margin-right: 15px;
-        }
-
-        .menu {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .menu a:hover {
-            color: var(--amarelo);
-        }
-
-        .hero {
-            margin-top: 100px;
-            background: url('https://images.unsplash.com/photo-1625246333192-9f8f3f4b5f5b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            color: white;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 166, 81, 0.75);
-        }
-
-        .hero-content {
-            position: relative;
-            max-width: 700px;
-        }
-
-        .hero h1 {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 4.5rem;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--laranja);
-            color: white;
-            padding: 18px 40px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: 0.3s;
-            box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
-        }
-
-        .btn:hover {
-            transform: scale(1.08);
-            background: #e65c00;
-        }
-
-        section {
-            padding: 100px 0;
-        }
-
-        h2 {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 60px;
-            color: var(--verde);
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: 0.4s;
-        }
-
-        .card:hover {
-            transform: translateY(-15px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 25px;
-        }
-
-        footer {
-            background: #1B5E20;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-    </style>
+    <title>Agrinho 2026 | Paraná</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    🌱 <span>Agrinho 2026</span>
-                </div>
-                <ul class="menu">
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">O Programa</a></li>
-                    <li><a href="#">Tema 2026</a></li>
-                    <li><a href="#">Inscrições</a></li>
-                    <li><a href="#">Galeria</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo">AGRINHO 2026</div>
+            <ul class="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Tema</a></li>
+                <li><a href="#">Conquistas</a></li>
+                <li><a href="#">Redes</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="hero">
-        <div class="container hero-content">
-            <h1>Agro Forte,<br>Futuro Sustentável</h1>
-            <p>Programa Agrinho 2026 – Conectando crianças, campo e sustentabilidade!</p>
-            <a href="#" class="btn">Inscreva sua escola agora!</a>
+        <div class="hero-content">
+            <h1>AGRINHO 2026</h1>
+            <p>PARANÁ • Agro Forte, Futuro Sustentável</p>
+            <button onclick="inscrever()" class="btn">Inscreva sua Escola Agora!</button>
         </div>
     </section>
 
     <section>
-        <div class="container">
-            <h2>Tema 2026</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1500595046743-3c3e6e6e6e6e" alt="Produção">
-                    <div class="card-content">
-                        <h3>🌾 Produção Responsável</h3>
-                        <p>Aprendendo a produzir alimentos de forma sustentável.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3a9d4b5f5" alt="Meio Ambiente">
-                    <div class="card-content">
-                        <h3>🌳 Preservação</h3>
-                        <p>Cuidando do solo, água e biodiversidade.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1581093458791-9f3c2a5e6f5f" alt="Crianças">
-                    <div class="card-content">
-                        <h3>👦👧 Protagonismo Infantil</h3>
-                        <p>Crianças construindo o futuro do agro.</p>
-                    </div>
-                </div>
+        <h2>Sobre o Agrinho</h2>
+        <div class="content">
+            <p>O Programa Agrinho é uma das maiores iniciativas socioeducativas do Brasil, desenvolvido pelo Sistema FAEP/SENAR-PR.</p>
+            <p>Em 2026, o tema continua inspirando milhares de crianças a valorizarem o agronegócio paranaense.</p>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <h2>Tema 2026</h2>
+        <div class="content">
+            <p><strong>🌱 Agro Forte, Futuro Sustentável</strong></p>
+            <p>Produção responsável, preservação ambiental e protagonismo infantil.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Principais Conquistas</h2>
+        <div class="conquistas">
+            <div class="item">
+                <h3>⭐ Milhares de escolas</h3>
+                <p>Participando em todo o Paraná</p>
+            </div>
+            <div class="item">
+                <h3>⭐ + de 300 mil crianças</h3>
+                <p>Envolvidas nos últimos anos</p>
+            </div>
+            <div class="item">
+                <h3>⭐ Exposição Estadual</h3>
+                <p>Com os melhores trabalhos</p>
             </div>
         </div>
     </section>
 
-    <section style="background: white;">
-        <div class="container">
-            <h2>Galeria de Trabalhos</h2>
-            <div class="galeria">
-                <!-- Você pode substituir por imagens reais dos alunos -->
-                <img src="https://picsum.photos/300/300?random=1" alt="Desenho Agrinho" style="border-radius:15px;">
-                <img src="https://picsum.photos/300/300?random=2" alt="Desenho Agrinho" style="border-radius:15px;">
-                <img src="https://picsum.photos/300/300?random=3" alt="Desenho Agrinho" style="border-radius:15px;">
-                <img src="https://picsum.photos/300/300?random=4" alt="Desenho Agrinho" style="border-radius:15px;">
-            </div>
+    <section>
+        <h2>Redes Sociais</h2>
+        <div class="content">
+            <p style="font-size: 1.6rem;">
+                <strong>@agrinhoparana</strong><br><br>
+                Instagram • Facebook • YouTube
+            </p>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p><strong>Programa Agrinho 2026</strong> – Realizado pelo SENAR / FAEP / FAEG / FAES (conforme seu estado)</p>
-            <p>🌱 Juntos cultivando um futuro melhor</p>
-            <p style="margin-top: 30px; opacity: 0.8;">© 2026 Agrinho - Todos os direitos reservados</p>
-        </div>
+        <p>Programa Agrinho 2026 • Sistema FAEP/SENAR-PR</p>
+        <p>Feito com ❤️ para o Agrinho Paraná</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
