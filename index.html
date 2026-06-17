@@ -1,212 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agrinho 2026</title>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#f4f8fb;
-    color:#222;
-}
-
-header{
-    background:white;
-    box-shadow:0 2px 15px rgba(0,0,0,0.08);
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
-}
-
-.logo{
-    font-size:2rem;
-    font-weight:700;
-    color:#4ecdc4;
-}
-
-.menu{
-    display:flex;
-    gap:20px;
-}
-
-.menu a{
-    text-decoration:none;
-    color:#333;
-    font-weight:600;
-}
-
-.hero{
-    margin-top:90px;
-    min-height:80vh;
-    background:linear-gradient(135deg,#7ce7e7,#56cfe1);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    padding:40px;
-}
-
-.hero-content h1{
-    font-size:4rem;
-    margin-bottom:20px;
-}
-
-.hero-content p{
-    font-size:1.2rem;
-    margin-bottom:25px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 30px;
-    background:white;
-    color:#56cfe1;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-5px);
-}
-
-section{
-    padding:80px 0;
-}
-
-.titulo{
-    text-align:center;
-    font-size:2.5rem;
-    margin-bottom:50px;
-    color:#56cfe1;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:25px;
-    padding:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#56cfe1;
-}
-
-footer{
-    background:#56cfe1;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-
-@media(max-width:768px){
-
-.hero-content h1{
-    font-size:2.5rem;
-}
-
-.menu{
-    display:none;
-}
-
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital e Inteligência Artificial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CIDIGITAL</div>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#deepfakes">Deepfakes</a></li>
+                    <li><a href="#desinformacao">Desinformação</a></li>
+                    <li><a href="#praticas">Boas Práticas</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-<div class="container">
-<nav>
-<div class="logo">🌱 Agrinho 2026</div>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Cidadania Digital e Inteligência Artificial</h1>
+            <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
+            <a href="#quiz" class="btn">Testar meus Conhecimentos</a>
+        </div>
+    </section>
 
-<div class="menu">
-<a href="#">Início</a>
-<a href="#">Agro</a>
-<a href="#">Sustentabilidade</a>
-<a href="#">Contato</a>
-</div>
-</nav>
-</div>
-</header>
+    <!-- DEEPFAKES -->
+    <section id="deepfakes">
+        <div class="container">
+            <h2>🔍 O que são Deepfakes?</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Definição</h3>
+                    <p>Deepfakes são vídeos, imagens ou áudios manipulados por Inteligência Artificial que trocam rostos ou alteram expressões de forma extremamente realista.</p>
+                </div>
+                <div class="card">
+                    <h3>Como identificar um Deepfake?</h3>
+                    <ul>
+                        <li>Olhos que piscam pouco ou de forma estranha</li>
+                        <li>Bordas borradas no rosto ou cabelo</li>
+                        <li>Iluminação inconsistente no rosto</li>
+                        <li>Lábios fora de sincronia com o áudio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-<div class="hero-content">
-<h1>Agro Forte, Futuro Sustentável</h1>
-<p>Construindo um futuro melhor através da tecnologia, educação e sustentabilidade no campo.</p>
+    <!-- DESINFORMAÇÃO -->
+    <section id="desinformacao">
+        <div class="container">
+            <h2>📢 Desinformação Gerada por IA</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Impactos na Sociedade</h3>
+                    <p>As IAs permitem criar fake news, vídeos falsos e campanhas de desinformação em massa com grande velocidade.</p>
+                </div>
+                <div class="card">
+                    <h3>Exemplos Reais</h3>
+                    <ul>
+                        <li>Vídeos falsos de políticos em eleições</li>
+                        <li>Notícias falsas sobre saúde e crises</li>
+                        <li>Ataques à reputação de pessoas comuns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a href="#" class="btn">Saiba Mais</a>
-</div>
-</section>
+    <!-- BOAS PRÁTICAS -->
+    <section id="praticas">
+        <div class="container">
+            <h2>✅ Boas Práticas de Cidadania Digital</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>1. Verifique a Fonte</h3>
+                    <p>Sempre confirme se a informação veio de um site ou jornal confiável.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Não Compartilhe Sem Conferir</h3>
+                    <p>Pare antes de repassar conteúdos sensacionais.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Use Pensamento Crítico</h3>
+                    <p>Se parece bom demais para ser verdade, provavelmente não é.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Ative a Autenticação 2FA</h3>
+                    <p>Proteja suas contas com autenticação de dois fatores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-<div class="container">
+    <!-- QUIZ -->
+    <section id="quiz">
+        <div class="container">
+            <h2>🧠 Quiz: Você consegue identificar Deepfakes?</h2>
+            <div id="quiz-container" class="card" style="max-width: 700px; margin: 0 auto; padding: 40px;">
+                <div id="question" style="font-size: 1.35rem; margin-bottom: 30px; font-weight: 500;"></div>
+                <div id="options"></div>
+                <button id="next-btn" class="btn" style="display: none; width: 100%; margin-top: 25px;">Próxima Pergunta</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </section>
 
-<h2 class="titulo">Temas Principais</h2>
+    <!-- CONTATO -->
+    <section id="contato">
+        <div class="container">
+            <h2>📬 Entre em Contato</h2>
+            <form id="contactForm" style="max-width: 600px; margin: 0 auto;">
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <textarea id="mensagem" placeholder="Sua mensagem ou dúvida..." rows="5" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
 
-<div class="cards">
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Cidadania Digital e Inteligência Artificial</p>
+            <p>Desenvolvido por [SEU NOME AQUI] • Turma [sua turma]</p>
+        </div>
+    </footer>
 
-<div class="card">
-<h3>🌾 Agricultura</h3>
-<p>A agricultura é essencial para a produção de alimentos e para o desenvolvimento econômico do país.</p>
-</div>
-
-<div class="card">
-<h3>♻️ Sustentabilidade</h3>
-<p>Práticas sustentáveis ajudam a preservar os recursos naturais para as futuras gerações.</p>
-</div>
-
-<div class="card">
-<h3>🚜 Tecnologia</h3>
-<p>O uso de máquinas e inovação aumenta a produtividade e melhora a qualidade de vida no campo.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<footer>
-<p>© 2026 Agrinho - Projeto Escolar</p>
-</footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
