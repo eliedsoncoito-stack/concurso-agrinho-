@@ -1,37 +1,75 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-    font-family: Arial;
-    margin: 0;
+  margin: 0;
+  background-color: #EEF1F5;
 }
 
 header {
-    background: #204d73;
-    color: white;
-    text-align: center;
-    padding: 25px;
+  background-color: #183C63;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+header p {
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    margin: 20px;
+  background-color: #FFFFFF;
+  color: #183C63;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  display: flex;
+  border: 1px solid #183C63;
+  margin: 16px;
+  padding: 16px;
+  gap: 16px;
 }
 
 img {
-    width: 70px;
+  width: 80px;
+  height: 80px;
 }
 
-h2 {
-    margin-top: 15px;
+.autor {
+  font-style: italic;
 }
 
-p {
-    font-size: 14px;
+.reacoes {
+  display: flex;
+  gap: 10px;
 }
 
-.post {
-    margin-bottom: 30px;
+.reacoes button {
+  border: 1px solid #183C63;
+  background-color: #FFFFFF;
+  color: #183C63;
+  padding: 6px 12px;
+  cursor: pointer;
 }
 
-.reacao {
-    padding: 5px 10px;
-    margin-right: 5px;
-    cursor: pointer;
+.reacoes button.ativo.btn-curtir {
+  background-color: #183C63;
+  color: #FFFFFF;
+}
+
+.reacoes button.ativo.btn-like {
+  background-color: #183C63;
+  color: #FFFFFF;
 }
