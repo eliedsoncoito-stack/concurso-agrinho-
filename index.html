@@ -1,64 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital e IA</title>
+    <title>Meu blog tech</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <h1>🌐 Cidadania Digital e Inteligência Artificial</h1>
-    <p>Conhecimento para usar a internet com segurança e responsabilidade.</p>
+    <h1>Meu blog tech</h1>
+    <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+    <button id="modoEscuro">🌙 Modo escuro</button>
 </header>
 
 <main>
 
-    <section class="post">
-        <h2>O que é Cidadania Digital?</h2>
-        <p class="author">Por: Seu Nome</p>
+    <article class="post">
+        <img src="1786139733139.png" alt="Tecnologia">
+        <h2>O futuro da tecnologia</h2>
+        <p class="autor">Por: Marcelo Paludetto</p>
+        <p>A tecnologia está presente cada vez mais em nossa rotina e continua transformando a maneira como estudamos, trabalhamos e nos comunicamos.</p>
+        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
+        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
+    </article>
 
-        <p>
-            Cidadania Digital é utilizar a internet de forma consciente,
-            respeitando as outras pessoas, protegendo seus dados e combatendo
-            notícias falsas. Todos têm direitos e deveres também no ambiente
-            digital.
-        </p>
-
-        <button onclick="curtir(0)">❤️ Curtir</button>
-        <span id="likes0">0</span>
-    </section>
-
-    <section class="post">
+    <article class="post">
+        <img src="1786139733139.png" alt="Inteligência artificial">
         <h2>Inteligência Artificial</h2>
-        <p class="author">Por: Seu Nome</p>
+        <p class="autor">Por: Marcelo Paludetto</p>
+        <p>A inteligência artificial está sendo utilizada em diversas áreas, ajudando pessoas a resolver problemas e automatizar tarefas.</p>
+        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
+        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
+    </article>
 
-        <p>
-            A Inteligência Artificial (IA) já faz parte do nosso dia a dia,
-            estando presente em celulares, aplicativos, tradutores,
-            assistentes virtuais e ferramentas de estudo. Ela ajuda as pessoas,
-            mas deve ser usada com ética e responsabilidade.
-        </p>
+    <article class="post">
+        <img src="1786139733139.png" alt="Programação">
+        <h2>Por que aprender programação?</h2>
+        <p class="autor">Por: Marcelo Paludetto</p>
+        <p>Aprender programação ajuda a desenvolver o raciocínio lógico e permite criar sites, aplicativos, jogos e muitas outras soluções.</p>
+        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
+        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
+    </article>
 
-        <button onclick="curtir(1)">🤖 Gostei</button>
-        <span id="likes1">0</span>
-    </section>
+    <article class="post">
+        <img src="1786139733139.png" alt="Segurança digital">
+        <h2>Segurança na internet</h2>
+        <p class="autor">Por: Marcelo Paludetto</p>
+        <p>Usar senhas fortes, evitar links suspeitos e manter os aplicativos atualizados são alguns cuidados importantes para navegar com segurança.</p>
+        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
+        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
+    </article>
 
-    <section class="post">
-        <h2>Dicas para um bom cidadão digital</h2>
-        <p class="author">Por: Seu Nome</p>
+    <article class="post">
+        <img src="1786139733139.png" alt="Computação em nuvem">
+        <h2>Computação em nuvem</h2>
+        <p class="autor">Por: Marcelo Paludetto</p>
+        <p>A computação em nuvem permite armazenar arquivos e utilizar serviços pela internet sem depender apenas do armazenamento do dispositivo.</p>
+        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
+        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
+    </article>
 
-        <ul>
-            <li>🔒 Proteja suas senhas.</li>
-            <li>📢 Não compartilhe fake news.</li>
-            <li>🤝 Respeite as pessoas na internet.</li>
-            <li>🤖 Use a IA de forma responsável.</li>
-        </ul>
+    <article class="post">
+        <img src="1786139733139.png" alt="Robótica">
+        <h2>Robótica e inovação</h2>
+        <p class="autor">Por: Marcelo Paludetto</p>
+        <p>A robótica combina programação, eletrônica e engenharia para criar máquinas capazes de realizar diferentes tarefas.</p>
+        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
+        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
+    </article>
 
-        <button onclick="curtir(2)">👍 Apoio</button>
-        <span id="likes2">0</span>
-    </section>
+    <article class="post">
+        <img src="1786139733139.png" alt="Games">
+        <h2>Tecnologia nos games</h2>
+        <p class="autor">Por: Marcelo Paludetto</p>
+        <p>Os jogos eletrônicos evoluíram bastante graças aos avanços em gráficos, inteligência artificial, processamento e realidade virtual.</p>
+        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
+        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
+    </article>
+
+    <article class="post">
+        <img src="1786139733139.png" alt="Internet">
+        <h2>A evolução da internet</h2>
+        <p class="autor">Por: Marcelo Paludetto</p>
+        <p>A internet mudou a forma como acessamos informações, conversamos com outras pessoas e utilizamos serviços no dia a dia.</p>
+        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
+        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
+    </article>
 
 </main>
 
