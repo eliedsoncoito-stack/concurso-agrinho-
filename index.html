@@ -1,97 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu blog tech</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu blog tech</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Meu blog tech</h1>
-    <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
-    <button id="modoEscuro">🌙 Modo escuro</button>
+  <h1>Meu blog tech</h1>
+  <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
 </header>
 
 <main>
 
-    <article class="post">
-        <img src="1786139733139.png" alt="Tecnologia">
-        <h2>O futuro da tecnologia</h2>
-        <p class="autor">Por: Marcelo Paludetto</p>
-        <p>A tecnologia está presente cada vez mais em nossa rotina e continua transformando a maneira como estudamos, trabalhamos e nos comunicamos.</p>
-        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
-        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
-    </article>
+  <article data-id="post1">
+    <img src="https://cdn-icons-png.flaticon.com/128/2721/2721620.png" alt="icone">
+    <div>
+      <h2>Meu primeiro post</h2>
+      <p class="autor">Por: eliedsonhzk</p>
+      <p>Bem-vindo ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+      <div class="reacoes">
+        <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">6</span></button>
+        <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">4</span></button>
+      </div>
+    </div>
+  </article>
 
-    <article class="post">
-        <img src="1786139733139.png" alt="Inteligência artificial">
-        <h2>Inteligência Artificial</h2>
-        <p class="autor">Por: Marcelo Paludetto</p>
-        <p>A inteligência artificial está sendo utilizada em diversas áreas, ajudando pessoas a resolver problemas e automatizar tarefas.</p>
-        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
-        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
-    </article>
+  <article data-id="post2">
+    <img src="https://cdn-icons-png.flaticon.com/128/2721/2721296.png" alt="icone">
+    <div>
+      <h2>A quantidade de dados no mundo é surreal</h2>
+      <p class="autor">Por: eliedsonhzk</p>
+      <p>Estima-se que 90% de todos os dados existentes no mundo hoje foram gerados apenas nos últimos dois anos. Vivemos em uma verdadeira explosão de informação que não para de acelerar.</p>
+      <div class="reacoes">
+        <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">12</span></button>
+        <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">8</span></button>
+      </div>
+    </div>
+  </article>
 
-    <article class="post">
-        <img src="1786139733139.png" alt="Programação">
-        <h2>Por que aprender programação?</h2>
-        <p class="autor">Por: Marcelo Paludetto</p>
-        <p>Aprender programação ajuda a desenvolver o raciocínio lógico e permite criar sites, aplicativos, jogos e muitas outras soluções.</p>
-        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
-        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
-    </article>
+  <article data-id="post3">
+    <img src="https://cdn-icons-png.flaticon.com/128/3067/3067257.png" alt="icone">
+    <div>
+      <h2>O primeiro mouse não era de plástico</h2>
+      <p class="autor">Por: eliedsonhzk</p>
+      <p>Antes do modelo famoso dos anos 80/90, o primeiro mouse do mundo foi construído em 1964, em madeira, com formato de caixa quadrada e simples no design.</p>
+      <div class="reacoes">
+        <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">9</span></button>
+        <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">5</span></button>
+      </div>
+    </div>
+  </article>
 
-    <article class="post">
-        <img src="1786139733139.png" alt="Segurança digital">
-        <h2>Segurança na internet</h2>
-        <p class="autor">Por: Marcelo Paludetto</p>
-        <p>Usar senhas fortes, evitar links suspeitos e manter os aplicativos atualizados são alguns cuidados importantes para navegar com segurança.</p>
-        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
-        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
-    </article>
-
-    <article class="post">
-        <img src="1786139733139.png" alt="Computação em nuvem">
-        <h2>Computação em nuvem</h2>
-        <p class="autor">Por: Marcelo Paludetto</p>
-        <p>A computação em nuvem permite armazenar arquivos e utilizar serviços pela internet sem depender apenas do armazenamento do dispositivo.</p>
-        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
-        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
-    </article>
-
-    <article class="post">
-        <img src="1786139733139.png" alt="Robótica">
-        <h2>Robótica e inovação</h2>
-        <p class="autor">Por: Marcelo Paludetto</p>
-        <p>A robótica combina programação, eletrônica e engenharia para criar máquinas capazes de realizar diferentes tarefas.</p>
-        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
-        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
-    </article>
-
-    <article class="post">
-        <img src="1786139733139.png" alt="Games">
-        <h2>Tecnologia nos games</h2>
-        <p class="autor">Por: Marcelo Paludetto</p>
-        <p>Os jogos eletrônicos evoluíram bastante graças aos avanços em gráficos, inteligência artificial, processamento e realidade virtual.</p>
-        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
-        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
-    </article>
-
-    <article class="post">
-        <img src="1786139733139.png" alt="Internet">
-        <h2>A evolução da internet</h2>
-        <p class="autor">Por: Marcelo Paludetto</p>
-        <p>A internet mudou a forma como acessamos informações, conversamos com outras pessoas e utilizamos serviços no dia a dia.</p>
-        <button class="reacao" data-tipo="coracao">❤️ <span>0</span></button>
-        <button class="reacao" data-tipo="like">👍 <span>0</span></button>
-    </article>
+  <article data-id="post4">
+    <img src="https://cdn-icons-png.flaticon.com/128/1055/1055666.png" alt="icone">
+    <div>
+      <h2>Por que o teclado é chamado de QWERTY?</h2>
+      <p class="autor">Por: eliedsonhzk</p>
+      <p>O layout QWERTY foi criado em 1873 para máquinas de escrever, justamente para evitar que as hastes metálicas travassem ao digitar rápido. Curiosamente, seguimos usando esse padrão até hoje.</p>
+      <div class="reacoes">
+        <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">15</span></button>
+        <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">10</span></button>
+      </div>
+    </div>
+  </article>
 
 </main>
 
 <script src="script.js"></script>
-
 </body>
 </html>
