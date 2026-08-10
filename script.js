@@ -1,28 +1,42 @@
-document.querySelectorAll(".reacao").forEach(function(botao) {
-    botao.addEventListener("click", function() {
+// Cada post tem um id único (data-id). O estado de curtida/like fica
+// salvo no localStorage do navegador, então cada pessoa só consegue
+// curtir e dar like UMA VEZ por post.
 
-        const tipo = botao.dataset.tipo;
-        const post = botao.closest(".post");
-        const numero = botao.querySelector("span");
-        const titulo = post.querySelector("h2").textContent;
-        const chave = "reacao_" + tipo + "_" + titulo;
+document.addEventListener("DOMContentLoaded", () => {
+  const artigos = document.querySelectorAll("article");
 
-        if (localStorage.getItem(chave)) {
-            return;
-        }
+  artigos.forEach(artigo => {
+    const postId = artigo.dataset.id;
+    const btnCurtir = artigo.querySelector(".btn-curtir");
+    const btnLike = artigo.querySelector(".btn-like");
 
-        numero.textContent = Number(numero.textContent) + 1;
-        localStorage.setItem(chave, "true");
-        botao.disabled = true;
-    });
-});
+    configurarBotao(btnCurtir, postId, "curtir");
+    configurarBotao(btnLike, postId, "like");
+  });
 
-document.getElementById("modoEscuro").addEventListener("click", function() {
-    document.body.classList.toggle("escuro");
+  function configurarBotao(botao, postId, tipo) {
+    const chave = `${postId}_${tipo}`;
+    const contador = botao.querySelector(".contador");
 
-    if (document.body.classList.contains("escuro")) {
-        this.textContent = "☀️ Modo claro";
-    } else {
-        this.textContent = "🌙 Modo escuro";
+    if (localStorage.getItem(chave) === "true") {
+      botao.classList.add("ativo");
     }
+
+    botao.addEventListener("click", () => {
+      const jaReagiu = localStorage.getItem(chave) === "true";
+      let valorAtual = parseInt(contador.textContent);
+
+      if (jaReagiu) {
+        valorAtual--;
+        localStorage.setItem(chave, "false");
+        botao.classList.remove("ativo");
+      } else {
+        valorAtual++;
+        localStorage.setItem(chave, "true");
+        botao.classList.add("ativo");
+      }
+
+      contador.textContent = valorAtual;
+    });
+  }
 });
