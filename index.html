@@ -4,7 +4,83 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meu blog tech</title>
-<link rel="stylesheet" href="style.css">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #EEF1F5;
+}
+
+header {
+  background-color: #183C63;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+header p {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #FFFFFF;
+  color: #183C63;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  display: flex;
+  border: 1px solid #183C63;
+  margin: 16px;
+  padding: 16px;
+  gap: 16px;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+}
+
+.autor {
+  font-style: italic;
+}
+
+.reacoes {
+  display: flex;
+  gap: 10px;
+}
+
+.reacoes button {
+  border: 1px solid #183C63;
+  background-color: #FFFFFF;
+  color: #183C63;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.reacoes button.ativo.btn-curtir {
+  background-color: #183C63;
+  color: #FFFFFF;
+}
+
+.reacoes button.ativo.btn-like {
+  background-color: #183C63;
+  color: #FFFFFF;
+}
+</style>
 </head>
 <body>
 
@@ -69,6 +145,45 @@
 
 </main>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const artigos = document.querySelectorAll("article");
+
+  artigos.forEach(artigo => {
+    const postId = artigo.dataset.id;
+    const btnCurtir = artigo.querySelector(".btn-curtir");
+    const btnLike = artigo.querySelector(".btn-like");
+
+    configurarBotao(btnCurtir, postId, "curtir");
+    configurarBotao(btnLike, postId, "like");
+  });
+
+  function configurarBotao(botao, postId, tipo) {
+    const chave = `${postId}_${tipo}`;
+    const contador = botao.querySelector(".contador");
+
+    if (localStorage.getItem(chave) === "true") {
+      botao.classList.add("ativo");
+    }
+
+    botao.addEventListener("click", () => {
+      const jaReagiu = localStorage.getItem(chave) === "true";
+      let valorAtual = parseInt(contador.textContent);
+
+      if (jaReagiu) {
+        valorAtual--;
+        localStorage.setItem(chave, "false");
+        botao.classList.remove("ativo");
+      } else {
+        valorAtual++;
+        localStorage.setItem(chave, "true");
+        botao.classList.add("ativo");
+      }
+
+      contador.textContent = valorAtual;
+    });
+  }
+});
+</script>
 </body>
 </html>
