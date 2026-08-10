@@ -1,76 +1,95 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
-    color:#333;
+header {
+    background: #204d73;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
 }
 
-header{
-    background:#0066cc;
-    color:white;
-    text-align:center;
-    padding:30px;
+header h1 {
+    margin: 0 0 10px;
 }
 
-header p{
-    margin-top:10px;
+header p {
+    margin: 0 0 15px;
 }
 
-main{
-    width:80%;
-    max-width:900px;
-    margin:30px auto;
+#modoEscuro {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-.post{
-    background:white;
-    padding:20px;
-    margin-bottom:25px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.2);
+main {
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 0 15px;
 }
 
-.post h2{
-    color:#0066cc;
-    margin-bottom:10px;
+.post {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
 }
 
-.author{
-    color:#777;
-    margin-bottom:15px;
-    font-style:italic;
+.post img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.post p,
-.post li{
-    line-height:1.6;
+.post h2 {
+    margin-bottom: 8px;
 }
 
-ul{
-    margin-left:20px;
-    margin-bottom:15px;
+.autor {
+    font-weight: bold;
 }
 
-button{
-    background:#0066cc;
-    color:white;
-    border:none;
-    padding:10px 18px;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:16px;
+.reacao {
+    border: none;
+    background: #eee;
+    padding: 7px 12px;
+    margin-right: 5px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-button:hover{
-    background:#004d99;
+.reacao:hover {
+    background: #ddd;
 }
 
-span{
-    margin-left:10px;
-    font-weight:bold;
+body.escuro {
+    background: #181818;
+    color: #eee;
+}
+
+body.escuro .post {
+    background: #252525;
+    box-shadow: 0 2px 8px #000;
+}
+
+body.escuro .reacao {
+    background: #444;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .post {
+        padding: 15px;
+    }
 }
