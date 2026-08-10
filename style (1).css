@@ -1,95 +1,37 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     margin: 0;
-    background: #f5f5f5;
-    color: #333;
 }
 
 header {
     background: #204d73;
     color: white;
     text-align: center;
-    padding: 30px 15px;
-}
-
-header h1 {
-    margin: 0 0 10px;
-}
-
-header p {
-    margin: 0 0 15px;
-}
-
-#modoEscuro {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    padding: 25px;
 }
 
 main {
-    max-width: 800px;
-    margin: 25px auto;
-    padding: 0 15px;
+    margin: 20px;
+}
+
+img {
+    width: 70px;
+}
+
+h2 {
+    margin-top: 15px;
+}
+
+p {
+    font-size: 14px;
 }
 
 .post {
-    background: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #ccc;
-}
-
-.post img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.post h2 {
-    margin-bottom: 8px;
-}
-
-.autor {
-    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .reacao {
-    border: none;
-    background: #eee;
-    padding: 7px 12px;
+    padding: 5px 10px;
     margin-right: 5px;
-    border-radius: 6px;
     cursor: pointer;
-}
-
-.reacao:hover {
-    background: #ddd;
-}
-
-body.escuro {
-    background: #181818;
-    color: #eee;
-}
-
-body.escuro .post {
-    background: #252525;
-    box-shadow: 0 2px 8px #000;
-}
-
-body.escuro .reacao {
-    background: #444;
-    color: white;
-}
-
-@media (max-width: 600px) {
-    main {
-        padding: 0 10px;
-    }
-
-    .post {
-        padding: 15px;
-    }
 }
